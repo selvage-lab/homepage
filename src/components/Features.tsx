@@ -86,24 +86,6 @@ export function Features() {
             );
           })}
         </div>
-
-        {/* Security note */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="border-amber-200 bg-amber-50">
-            <CardContent className="p-6">
-              <div className="flex items-start space-x-4">
-                <Shield className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg text-amber-900 mb-2">보안 및 개인정보 보호</h3>
-                  <p className="text-amber-800">
-                    Selvage는 개인정보 수집이나 민감한 데이터 보안을 위해 설계되지 않았습니다. 
-                    코드 분석 시 민감한 정보는 제외하고 사용해 주세요.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
