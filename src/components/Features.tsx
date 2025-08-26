@@ -23,7 +23,7 @@ export function Features() {
       icon: GitBranch,
       title: "Git 워크플로우 통합",
       description: "staged, unstaged, 특정 커밋/브랜치 간 변경사항 분석 지원",
-      badge: "Git 친화적"
+      badge: "개발자 친화적"
     },
     {
       icon: Bug,
@@ -33,21 +33,21 @@ export function Features() {
     },
     {
       icon: Target,
-      title: "최적화된 컨텍스트 분석",
+      title: "Smart Context",
       description: "Tree-sitter 기반 AST 분석을 통해 상황에 따라 최적화된 컨텍스트 제공",
-      badge: "스마트 분석"
+      badge: "최적화"
     },
     {
       icon: RotateCcw,
-      title: "자동 멀티턴 처리",
-      description: "컨텍스트 제한 초과 시 프롬프트를 자동 분할하여 안정적인 대용량 코드 리뷰 지원",
-      badge: "대용량 지원"
+      title: "Large Context Review",
+      description: "모델의 Context Limit 초과 시에도 안정적인 대용량 코드 리뷰 지원",
+      badge: "대용량 코드 리뷰"
     },
     {
       icon: BookOpen,
       title: "오픈소스",
       description: "Apache-2.0 라이선스로 자유롭게 사용 및 수정 가능",
-      badge: "무료"
+      badge: "Apache-2.0"
     }
   ];
 

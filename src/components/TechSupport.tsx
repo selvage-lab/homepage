@@ -53,10 +53,6 @@ export function TechSupport() {
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 border-blue-500 text-blue-600">
-            <Globe className="w-4 h-4 mr-2" />
-            기술 지원
-          </Badge>
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
             <span className="text-blue-600">광범위한</span> 언어 및 모델 지원
           </h2>
