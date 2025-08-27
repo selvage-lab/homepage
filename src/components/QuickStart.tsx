@@ -65,7 +65,7 @@ export function QuickStart() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
-            <span className="text-green-600">3단계</span>로 시작하세요
+            <span className="text-blue-600">Quick Start</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             복잡한 설정 없이 몇 분 안에 AI 기반 코드 리뷰를 시작할 수 있습니다
