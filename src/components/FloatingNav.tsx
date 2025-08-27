@@ -16,7 +16,7 @@ export function FloatingNav() {
           }}
         >
           <Download className="w-5 h-5 mr-2" />
-          빠른 시작
+          Quick Start
           <ChevronRight className="w-5 h-5 ml-2" />
         </Button>
         
