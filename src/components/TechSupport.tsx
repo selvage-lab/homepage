@@ -261,7 +261,6 @@ export function AIModels() {
                     <div className="flex items-center space-x-2">
                       <Brain className="w-5 h-5 text-blue-600" />
                       <span>{provider.category}</span>
-                      {provider.special && <Badge className="bg-yellow-200 text-yellow-800 border-yellow-300">특별 제공</Badge>}
                     </div>
                     <span className="text-sm text-slate-500 font-normal">{provider.subtitle}</span>
                   </CardTitle>
