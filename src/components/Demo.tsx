@@ -40,33 +40,6 @@ export function Demo() {
               />
             </div>
           </div>
-          
-          {/* Process steps */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">1</span>
-              </div>
-              <h3 className="text-xl mb-2 text-slate-900">코드 변경</h3>
-              <p className="text-slate-600">Git으로 코드를 수정하고 변경사항을 만듭니다</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl mb-2 text-slate-900">AI 분석</h3>
-              <p className="text-slate-600">selvage가 변경사항을 AI로 분석합니다</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">3</span>
-              </div>
-              <h3 className="text-xl mb-2 text-slate-900">리뷰 결과</h3>
-              <p className="text-slate-600">품질 개선 및 버그 수정 제안을 받습니다</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

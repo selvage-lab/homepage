@@ -14,20 +14,23 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:50px_50px] opacity-30"></div>
       
       <div className="relative z-10 container mx-auto px-6 text-center">
-        {/* Main heading - 더 적절한 크기로 조정 */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-8 text-white leading-tight font-bold">
+        {/* Main heading - 적절한 사이즈로 조정 */}
+        <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-16 text-white leading-tight font-bold">
           AI 코드 리뷰, <span className="text-blue-300">지금 시작하세요</span>
         </h1>
         
-        {/* Subtitle - 간결하고 명확한 설명 */}
-        <p className="text-lg md:text-xl lg:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Selvage는 AI 기반 코드 리뷰 CLI 도구입니다.
-          <br />
-          더 이상 리뷰를 기다리지 마세요.<br></br>AI가 코드 변경사항을 즉시 분석하여 품질 개선과 버그 예방을 제공합니다.
-        </p>
+        {/* Subtitle - 타이포그래피 중심 미니멀리즘 */}
+        <div className="mb-12 max-w-5xl mx-auto">
+          <div className="space-y-2 text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-100 leading-relaxed font-light">
+            <p>Selvage는 AI 코드 리뷰 CLI 입니다.</p>
+            <p>리뷰 대기 없이 즉시 피드백을 받으세요.</p>
+            <p>구독 없이 사용량 기반으로 지불합니다.</p>
+            <p>AI가 변경된 코드를 분석해 품질을 높이고 버그를 미리 막습니다.</p>
+          </div>
+        </div>
         
-        {/* Installation preview - 더 깔끔하게 정리 */}
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-300/20 rounded-xl p-6 md:p-8 max-w-3xl mx-auto shadow-2xl">
+        {/* Installation preview - 적절한 사이즈로 조정 */}
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-blue-300/20 rounded-xl p-6 md:p-8 max-w-4xl mx-auto shadow-2xl">
           <div className="text-left space-y-3 font-mono text-base md:text-lg">
             <div className="text-blue-300 flex items-center">
               <span className="text-blue-500 text-xl mr-3">$</span> 

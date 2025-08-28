@@ -44,20 +44,17 @@ export function SmartContext() {
   return (
     <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
             <span className="text-blue-600">Smart Context</span> 기능
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Tree-sitter 기반 AST 분석으로 필요한 코드만 정확히 추출하여 비용을 절감하고 리뷰 품질을 향상시킵니다
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto space-y-20">
           {/* 소개 카드 */}
           <div className="p-6 bg-blue-50 rounded-lg mb-10">
                 <p className="text-blue-900 text-lg leading-relaxed">
-                  Selvage는 <strong>Tree-sitter 기반 AST 분석</strong>을 통해 변경된 라인과 관련된 코드 블록만 정확히 추출하여, 
+                  Selvage는 <strong>AST</strong>를 활용해 변경된 라인과 관련된 코드 블록만 정확히 추출하여, 
                   <strong className="text-blue-700"> 비용 효율성과 리뷰 품질을 동시에 보장</strong>합니다.
                 </p>
           </div>
@@ -75,7 +72,7 @@ export function SmartContext() {
                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#10b981' }}></div>
                     <span className="font-semibold text-slate-900 text-lg">정밀 추출</span>
                   </div>
-                  <p className="text-slate-600 text-base leading-relaxed">변경된 라인이 속한 최소 함수/클래스 블록 + 관련 의존성(import 등)만 추출</p>
+                  <p className="text-slate-600 text-base leading-relaxed">변경된 라인이 속한 최소 함수/클래스 블록과 관련 의존성(e.g.import 구문 등)만 추출</p>
                 </div>
                 <div className="p-6 bg-white rounded-lg border border-slate-200 hover:shadow-md transition-shadow">
                   <div className="flex items-center space-x-3 mb-3">
@@ -220,7 +217,7 @@ export function AIModels() {
     },
     {
       category: "OpenRouter 제공 모델",
-      subtitle: "(OpenRouter API 키만 필요)",
+      subtitle: "(OpenRouter API 키 필요)",
       special: true,
       models: [
         { name: "qwen3-coder", description: "480B 파라미터 MoE 코딩 특화 모델 (1M+ 토큰)", provider: "Qwen", recommended: true },
