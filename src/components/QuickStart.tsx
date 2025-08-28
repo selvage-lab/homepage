@@ -16,6 +16,15 @@ import {
 } from "lucide-react";
 
 export function QuickStart() {
+  const handleCopy = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      // 복사 성공 시 피드백을 줄 수 있습니다 (선택사항)
+      console.log('복사되었습니다:', text);
+    }).catch(err => {
+      console.error('복사 실패:', err);
+    });
+  };
+
   const steps = [
     {
       icon: Download,
@@ -169,7 +178,7 @@ export function QuickStart() {
                     <div className="bg-slate-900 rounded-lg p-4 mb-4 h-32 flex flex-col">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-slate-400 text-sm">터미널</span>
-                        <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                        <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(step.code)}>
                           <Copy className="w-4 h-4" />
                         </Button>
                       </div>
@@ -212,7 +221,7 @@ export function QuickStart() {
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-slate-400 text-sm">명령어</span>
-                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(`curl -LsSf https://astral.sh/uv/install.sh | sh\nuv tool install selvage`)}>
                             <Copy className="w-4 h-4" />
                           </Button>
                         </div>
@@ -249,7 +258,7 @@ export function QuickStart() {
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-slate-400 text-sm">명령어</span>
-                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(`brew install pipx\npipx install selvage`)}>
                             <Copy className="w-4 h-4" />
                           </Button>
                         </div>
@@ -286,7 +295,7 @@ export function QuickStart() {
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-slate-400 text-sm">명령어</span>
-                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy("pip install selvage")}>
                             <Copy className="w-4 h-4" />
                           </Button>
                         </div>
@@ -321,7 +330,7 @@ export function QuickStart() {
                         <div className="bg-slate-900 rounded-lg p-4 mb-3">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-slate-400 text-sm">명령어</span>
-                            <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                            <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                               <Copy className="w-4 h-4" />
                             </Button>
                           </div>
@@ -352,7 +361,7 @@ export function QuickStart() {
             <div className="bg-slate-900 rounded-lg p-6 mb-8">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-slate-400 text-sm">기본 명령어</span>
-                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy("selvage review [OPTIONS]")}>
                   <Copy className="w-4 h-4" />
                 </Button>
               </div>
@@ -399,7 +408,7 @@ export function QuickStart() {
                           <div className="bg-slate-900 rounded-lg p-4">
                             <div className="flex items-center justify-between mb-2">
                               <span className="text-slate-400 text-sm">명령어</span>
-                              <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                              <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                                 <Copy className="w-4 h-4" />
                               </Button>
                             </div>
@@ -437,7 +446,7 @@ export function QuickStart() {
                         <div className="bg-slate-900 rounded-lg p-4">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-slate-400 text-sm">명령어</span>
-                            <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                            <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                               <Copy className="w-4 h-4" />
                             </Button>
                           </div>
