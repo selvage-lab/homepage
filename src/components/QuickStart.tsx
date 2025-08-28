@@ -20,8 +20,8 @@ export function QuickStart() {
     {
       icon: Download,
       title: "설치",
-      description: "pip로 간단 설치",
-      code: "pip install selvage",
+      description: "uv로 간단 설치",
+      code: "uv tool install selvage",
       note: "Python 3.10+ 필요"
     },
     {
@@ -194,6 +194,114 @@ export function QuickStart() {
               CLI 사용법
             </h3>
             <p className="text-lg text-slate-600">Selvage의 다양한 명령어와 옵션을 확인해보세요</p>
+          </div>
+
+          {/* Selvage 설치하기 */}
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-8">
+              <Download className="w-6 h-6 text-blue-600" />
+              <h4 className="text-xl font-semibold text-slate-900">Selvage 설치하기</h4>
+            </div>
+            <div className="space-y-4">
+              <Card className="border border-slate-200 hover:border-blue-300 transition-colors bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h5 className="text-lg text-slate-900 mb-2">권장 방법 (uv 사용)</h5>
+                      <div className="bg-slate-900 rounded-lg p-4 mb-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-slate-400 text-sm">명령어</span>
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                            <Copy className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <div className="space-y-2">
+                          <code className="text-blue-400 font-mono text-sm block">
+                            #uv 설치
+                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            curl -LsSf https://astral.sh/uv/install.sh | sh 
+                          </code>
+                          <br></br>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            #selvage 설치
+                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            uv tool install selvage
+                          </code>
+                        </div>
+                      </div>
+                      <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
+                        uv는 한 번만 설치하면 됩니다
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-slate-200 hover:border-blue-300 transition-colors bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h5 className="text-lg text-slate-900 mb-2">대안 방법 (pipx 사용)</h5>
+                      <div className="bg-slate-900 rounded-lg p-4 mb-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-slate-400 text-sm">명령어</span>
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                            <Copy className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <div className="space-y-2">
+                          <code className="text-blue-400 font-mono text-sm block">
+                            #pipx 설치
+                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            brew install pipx
+                          </code>
+                          <br></br>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            #selvage 설치
+                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">
+                            pipx install selvage
+                          </code>
+                        </div>
+                      </div>
+                      <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
+                        macOS 사용자를 위한 대안 방법
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-slate-200 hover:border-blue-300 transition-colors bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-yellow-500 mt-1 flex-shrink-0" />
+                    <div className="flex-1">
+                      <h5 className="text-lg text-slate-900 mb-2">전통적 방법 (pip)</h5>
+                      <div className="bg-slate-900 rounded-lg p-4 mb-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-slate-400 text-sm">명령어</span>
+                          <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0">
+                            <Copy className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <code className="text-blue-400 font-mono text-sm block">
+                          pip install selvage
+                        </code>
+                      </div>
+                      <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
+                        ⚠️ 일부 환경에서 externally-managed-environment 에러 발생 가능
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Selvage 설정하기 */}

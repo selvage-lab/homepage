@@ -34,7 +34,7 @@ export function Hero() {
           <div className="text-left space-y-3 font-mono text-base md:text-lg">
             <div className="text-blue-300 flex items-center">
               <span className="text-blue-500 text-xl mr-3">$</span> 
-              <span>pip install selvage</span>
+              <span>uv tool install selvage</span>
             </div>
             <div className="text-blue-300 flex items-center">
               <span className="text-blue-500 text-xl mr-3">$</span> 
