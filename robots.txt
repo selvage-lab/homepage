@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://selvage.ai/sitemap.xml
+
+# Allow crawling of all content
+# Block crawling of temporary or private directories if needed
+# Disallow: /private/
+# Disallow: /temp/
