@@ -21,7 +21,7 @@ export function Footer() {
         
         {/* Main navigation links - organized in grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
-          <a href="https://github.com/anomie7/selvage" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
+          <a href="https://github.com/selvage-lab/selvage" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
             <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
             <span className="text-sm font-medium">GitHub</span>
             <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
@@ -30,12 +30,12 @@ export function Footer() {
             <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
             <span className="text-sm font-medium">Contact</span>
           </a>
-          <a href="https://github.com/anomie7/selvage/issues" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
+          <a href="https://github.com/selvage-lab/selvage/issues" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
             <Bug className="w-4 h-4 group-hover:scale-110 transition-transform" />
             <span className="text-sm font-medium">Issues</span>
             <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
           </a>
-          <a href="https://github.com/anomie7/selvage/releases" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
+          <a href="https://github.com/selvage-lab/selvage/releases" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group">
             <FileText className="w-4 h-4 group-hover:scale-110 transition-transform" />
             <span className="text-sm font-medium">Releases</span>
             <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
@@ -72,7 +72,7 @@ export function Footer() {
               className="border-slate-400 text-slate-100 bg-slate-800/50 hover:bg-slate-600 hover:border-slate-300 hover:text-white transition-all duration-200 group flex-shrink-0"
               asChild
             >
-              <a href="https://github.com/anomie7/selvage" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+              <a href="https://github.com/selvage-lab/selvage" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <Star className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span className="font-medium">Star on GitHub</span>
               </a>
