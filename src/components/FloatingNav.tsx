@@ -2,7 +2,28 @@ import React from "react";
 import { Button } from "./ui/button";
 import { ChevronRight, Download, Github } from "lucide-react";
 
+// Google Analytics gtag 함수 타입 선언
+declare global {
+  interface Window {
+    gtag: (command: string, targetId: string, config?: any) => void;
+  }
+}
+
 export function FloatingNav() {
+  const handleGitHubClick = () => {
+    // Google Ads 전환 추적
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-17531799704/ZonbCLbSoJQbEJiR6KdB',
+        'value': 1.0,
+        'currency': 'KRW'
+      });
+    }
+    
+    // GitHub 페이지로 이동
+    window.open('https://github.com/selvage-lab/selvage', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <nav>
       {/* Desktop Navigation */}
@@ -24,12 +45,10 @@ export function FloatingNav() {
           variant="outline" 
           size="default" 
           className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 shadow-xl transition-all duration-300 hover:scale-105 h-12 px-4"
-          asChild
+          onClick={handleGitHubClick}
         >
-          <a href="https://github.com/selvage-lab/selvage" target="_blank" rel="noopener noreferrer">
-            <Github className="w-5 h-5 mr-2" />
-            GitHub
-          </a>
+          <Github className="w-5 h-5 mr-2" />
+          GitHub
         </Button>
       </div>
 
@@ -51,11 +70,9 @@ export function FloatingNav() {
           variant="outline" 
           size="default" 
           className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 shadow-xl transition-all duration-300 h-10"
-          asChild
+          onClick={handleGitHubClick}
         >
-          <a href="https://github.com/selvage-lab/selvage" target="_blank" rel="noopener noreferrer">
-            <Github className="w-4 h-4" />
-          </a>
+          <Github className="w-4 h-4" />
         </Button>
       </div>
     </nav>
