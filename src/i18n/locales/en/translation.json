@@ -112,13 +112,7 @@
         "smartContextTitle": "Smart Context Supported Languages",
         "generalContextTitle": "General Context Extraction Supported Languages",
         "generalContextSubtitle": "Supports general context extraction for major programming languages",
-        "conclusionPrefix": "Provides ",
-        "conclusionBold1": "excellent code review quality",
-        "conclusionMiddle": " in major programming languages through ",
-        "conclusionBold2": "general context extraction methods",
-        "conclusionMiddle2": ".<br />Smart Context supported languages are continuously ",
-        "conclusionBold3": "expanding",
-        "conclusionSuffix": "."
+        "conclusion": "Provides <strong>excellent code review quality</strong> in major programming languages through <strong>general context extraction methods</strong>.<br />Smart Context supported languages are continuously <strong>expanding</strong>."
       }
     },
     "aiModels": {

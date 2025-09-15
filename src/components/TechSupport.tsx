@@ -186,14 +186,10 @@ export function SmartContext() {
 
               {/* 마무리 메시지 서브섹션 */}
               <div className="mt-8 pt-6 border-slate-200">
-                  <p className="text-slate-800 text-lg leading-relaxed">
-                    <strong className="text-blue-700">{t('techSupport.smartContext.languageSupport.conclusionBold1')}</strong>
-                    {t('techSupport.smartContext.languageSupport.conclusionMiddle')}
-                    <strong>{t('techSupport.smartContext.languageSupport.conclusionBold2')}</strong>
-                    {t('techSupport.smartContext.languageSupport.conclusionMiddle2')}
-                    <strong>{t('techSupport.smartContext.languageSupport.conclusionBold3')}</strong>
-                    {t('techSupport.smartContext.languageSupport.conclusionSuffix')}
-                  </p>
+                  <p 
+                    className="text-slate-800 text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: t('techSupport.smartContext.languageSupport.conclusion') }}
+                  />
               </div>
             </CardContent>
           </Card>

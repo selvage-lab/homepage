@@ -112,13 +112,7 @@
         "smartContextTitle": "Smart Context 지원 언어",
         "generalContextTitle": "범용 컨텍스트 추출 지원 언어",
         "generalContextSubtitle": "주요 프로그래밍 언어들의 범용 컨텍스트 추출을 지원합니다",
-        "conclusionPrefix": "",
-        "conclusionBold1": "범용 컨텍스트 추출 방식",
-        "conclusionMiddle": "으로 주요 프로그래밍 언어에서 ",
-        "conclusionBold2": "우수한 코드 리뷰 품질",
-        "conclusionMiddle2": "을 제공합니다.<br />Smart Context 지원 언어는 지속적으로 ",
-        "conclusionBold3": "확장",
-        "conclusionSuffix": "하고 있습니다."
+        "conclusion": "<strong>범용 컨텍스트 추출 방식</strong>으로 주요 프로그래밍 언어에서 <strong>우수한 코드 리뷰 품질</strong>을 제공합니다.<br />Smart Context 지원 언어는 지속적으로 <strong>확장</strong>하고 있습니다."
       }
     },
     "aiModels": {
