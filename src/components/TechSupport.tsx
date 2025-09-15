@@ -153,7 +153,7 @@ export function SmartContext() {
               <div>
                 <h4 className="text-xl font-semibold text-slate-900 mb-6 flex items-center space-x-3">
                   <Code className="w-6 h-6 text-green-600" />
-                  <span>Smart Context 지원 언어</span>
+                  <span>{t('techSupport.smartContext.languageSupport.smartContextTitle')}</span>
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {astLanguages.map((language, index) => (
@@ -169,9 +169,9 @@ export function SmartContext() {
               <div>
                 <h4 className="text-xl font-semibold text-slate-900 mb-3 flex items-center space-x-3">
                   <FileCode className="w-6 h-6 text-blue-600" />
-                  <span>범용 컨텍스트 추출 지원 언어</span>
+                  <span>{t('techSupport.smartContext.languageSupport.generalContextTitle')}</span>
                 </h4>
-                <p className="text-slate-600 text-sm mb-4">주요 프로그래밍 언어들의 범용 컨텍스트 추출을 지원합니다</p>
+                <p className="text-slate-600 text-sm mb-4">{t('techSupport.smartContext.languageSupport.generalContextSubtitle')}</p>
                 <div className="flex flex-wrap gap-3">
                   {["Go", "Ruby", "PHP", "C#", "C/C++", "Rust", "Swift", "Dart"].map((language, index) => (
                     <Badge key={index} variant="outline" className="border-slate-300 text-slate-700 text-sm py-2 px-3 bg-blue-100">
@@ -208,37 +208,37 @@ export function AIModels() {
 
   const aiModels = [
     {
-      category: "OpenAI 모델",
-      subtitle: "(OpenRouter 또는 OpenAI API 키)",
+      category: t('techSupport.aiModels.categories.openai.title'),
+      subtitle: t('techSupport.aiModels.categories.openai.subtitle'),
       models: [
-        { name: "gpt-5-high", description: "높은 정확도의 추론 모델 (400K 컨텍스트)", recommended: true, provider: undefined },
-        { name: "gpt-5", description: "최신 고급 추론 모델 (400K 컨텍스트)", recommended: false, provider: undefined },
-        { name: "gpt-5-mini", description: "경량화된 빠른 응답 모델 (400K 컨텍스트)", recommended: false, provider: undefined }
+        { name: "gpt-5-high", description: t('techSupport.aiModels.models.gpt5High'), recommended: true, provider: undefined },
+        { name: "gpt-5", description: t('techSupport.aiModels.models.gpt5'), recommended: false, provider: undefined },
+        { name: "gpt-5-mini", description: t('techSupport.aiModels.models.gpt5Mini'), recommended: false, provider: undefined }
       ]
     },
     {
-      category: "Anthropic 모델",
-      subtitle: "(OpenRouter 또는 Anthropic API 키)",
+      category: t('techSupport.aiModels.categories.anthropic.title'),
+      subtitle: t('techSupport.aiModels.categories.anthropic.subtitle'),
       models: [
-        { name: "claude-sonnet-4-thinking", description: "확장 사고 프로세스 지원 (200K 컨텍스트)", recommended: true, provider: undefined },
-        { name: "claude-sonnet-4", description: "하이브리드 추론 모델로 고급 코딩 최적화 (200K 컨텍스트)", recommended: false, provider: undefined },
+        { name: "claude-sonnet-4-thinking", description: t('techSupport.aiModels.models.claudeSonnet4Thinking'), recommended: true, provider: undefined },
+        { name: "claude-sonnet-4", description: t('techSupport.aiModels.models.claudeSonnet4'), recommended: false, provider: undefined },
       ]
     },
     {
-      category: "Google 모델",
-      subtitle: "(OpenRouter 또는 Google API 키)",
+      category: t('techSupport.aiModels.categories.google.title'),
+      subtitle: t('techSupport.aiModels.categories.google.subtitle'),
       models: [
-        { name: "gemini-2.5-pro", description: "대용량 컨텍스트 및 고급 추론 (1M+ 토큰)", recommended: false, provider: undefined },
-        { name: "gemini-2.5-flash", description: "응답 속도와 비용 효율성 최적화 (1M+ 토큰)", recommended: true, provider: undefined },
+        { name: "gemini-2.5-pro", description: t('techSupport.aiModels.models.gemini25Pro'), recommended: false, provider: undefined },
+        { name: "gemini-2.5-flash", description: t('techSupport.aiModels.models.gemini25Flash'), recommended: true, provider: undefined },
       ]
     },
     {
-      category: "OpenRouter 제공 모델",
-      subtitle: "(OpenRouter API 키 필요)",
+      category: t('techSupport.aiModels.categories.openrouter.title'),
+      subtitle: t('techSupport.aiModels.categories.openrouter.subtitle'),
       special: true,
       models: [
-        { name: "qwen3-coder", description: "480B 파라미터 MoE 코딩 특화 모델 (1M+ 토큰)", provider: "Qwen", recommended: true },
-        { name: "kimi-k2", description: "1T 파라미터 MoE 대용량 추론 모델 (128K 토큰)", provider: "Moonshot AI", recommended: false }
+        { name: "qwen3-coder", description: t('techSupport.aiModels.models.qwen3Coder'), provider: "Qwen", recommended: true },
+        { name: "kimi-k2", description: t('techSupport.aiModels.models.kimiK2'), provider: "Moonshot AI", recommended: false }
       ]
     }
   ];
@@ -261,9 +261,9 @@ export function AIModels() {
               <div className="flex items-start space-x-4">
                 <Zap className="w-8 h-8 text-blue-600 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl text-blue-900 mb-2">OpenRouter API 키 하나로 아래 모든 모델을 통합 관리하세요!</h3>
+                  <h3 className="text-xl text-blue-900 mb-2">{t('techSupport.aiModels.openRouterInfo.title')}</h3>
                   <p className="text-blue-800">
-                    OpenRouter를 통해 하나의 API 키로 모든 AI 모델에 접근할 수 있습니다. 개별 Provider API 키도 지원합니다.
+                    {t('techSupport.aiModels.openRouterInfo.description')}
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ export function AIModels() {
                             {model.recommended && (
                               <Badge variant="default" className="bg-green-100 text-green-700 border-green-200">
                                 <Star className="w-3 h-3 mr-1 fill-current" />
-                                추천
+                                {t('techSupport.aiModels.recommended')}
                               </Badge>
                             )}
                           </div>

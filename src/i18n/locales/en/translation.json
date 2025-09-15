@@ -273,5 +273,9 @@
     "loading": "Loading...",
     "copy": "Copy",
     "more": "+ More"
+  },
+  "languages": {
+    "ko": "한국어",
+    "en": "English"
   }
 }

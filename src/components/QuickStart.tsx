@@ -54,92 +54,44 @@ export function QuickStart() {
 
   const configExamples = [
     {
-      title: "모든 설정 보기",
+      title: t('quickStart.configuration.viewAllSettings'),
       code: "selvage config list"
     },
     {
-      title: "기본 모델 설정",
-      code: "selvage config model <모델명>",
-      examples: "예시: claude-sonnet-4-thinking"
+      title: t('quickStart.configuration.setDefaultModel'),
+      code: "selvage config model <model>",
+      examples: t('quickStart.configuration.examples.model')
     },
     {
-      title: "리뷰 결과 언어 설정",
-      code: "selvage config language <언어명>",
-      examples: "예시: English, Korean"
+      title: t('quickStart.configuration.setLanguage'),
+      code: "selvage config language <language>",
+      examples: t('quickStart.configuration.examples.language')
     }
   ];
 
   const reviewOptions = [
-    {
-      option: "--repo-path <경로>",
-      description: "Git 저장소 경로 (기본값: 현재 디렉토리)"
-    },
-    {
-      option: "--staged",
-      description: "스테이징된 변경사항만 리뷰"
-    },
-    {
-      option: "--target-commit <커밋ID>",
-      description: "특정 커밋부터 HEAD까지의 변경사항 리뷰 (예: abc1234)"
-    },
-    {
-      option: "--target-branch <브랜치명>",
-      description: "현재 브랜치와 지정된 브랜치 간 변경사항 리뷰 (예: main)"
-    },
-    {
-      option: "--model <모델명>",
-      description: "사용할 AI 모델 (예: claude-sonnet-4-thinking)"
-    },
-    {
-      option: "--open-ui",
-      description: "리뷰 완료 후 자동으로 UI 실행"
-    },
-    {
-      option: "--no-print",
-      description: "터미널에 리뷰 결과를 출력하지 않음 (기본적으로 터미널 출력 활성화)"
-    },
-    {
-      option: "--skip-cache",
-      description: "캐시를 사용하지 않고 새로운 리뷰 수행"
-    }
+    { option: "--repo-path <path>", description: t('quickStart.codeReview.options.repoPath') },
+    { option: "--staged", description: t('quickStart.codeReview.options.staged') },
+    { option: "--target-commit <sha>", description: t('quickStart.codeReview.options.targetCommit') },
+    { option: "--target-branch <branch>", description: t('quickStart.codeReview.options.targetBranch') },
+    { option: "--model <model>", description: t('quickStart.codeReview.options.model') },
+    { option: "--open-ui", description: t('quickStart.codeReview.options.openUi') },
+    { option: "--no-print", description: t('quickStart.codeReview.options.noPrint') },
+    { option: "--skip-cache", description: t('quickStart.codeReview.options.skipCache') }
   ];
 
   const usageExamples = [
-    {
-      title: "현재 워킹 디렉토리 변경사항 리뷰",
-      code: "selvage review"
-    },
-    {
-      title: "커밋 전 최종 점검",
-      code: "selvage review --staged"
-    },
-    {
-      title: "특정 파일들만 리뷰",
-      code: "git add specific_files.py && selvage review --staged"
-    },
-    {
-      title: "PR 보내기 전 코드 리뷰",
-      code: "selvage review --target-branch develop"
-    },
-    {
-      title: "빠르고 경제적인 모델로 간단한 변경사항 리뷰",
-      code: "selvage review --model gemini-2.5-flash"
-    },
-    {
-      title: "리뷰 후 웹 UI로 자세히 확인",
-      code: "selvage review --target-branch main --open-ui"
-    }
+    { title: t('quickStart.codeReview.examples.currentDir'), code: "selvage review" },
+    { title: t('quickStart.codeReview.examples.preCommit'), code: "selvage review --staged" },
+    { title: t('quickStart.codeReview.examples.specificFiles'), code: "git add specific_files.py && selvage review --staged" },
+    { title: t('quickStart.codeReview.examples.prReview'), code: "selvage review --target-branch develop" },
+    { title: t('quickStart.codeReview.examples.fastModel'), code: "selvage review --model gemini-2.5-flash" },
+    { title: t('quickStart.codeReview.examples.webUi'), code: "selvage review --target-branch main --open-ui" }
   ];
 
   const resultExamples = [
-    {
-      title: "저장된 모든 리뷰 결과를 웹 UI로 관리",
-      code: "selvage view"
-    },
-    {
-      title: "다른 포트에서 UI 실행",
-      code: "selvage view --port 8502"
-    }
+    { title: t('quickStart.results.examples.webUiManagement'), code: "selvage view" },
+    { title: t('quickStart.results.examples.differentPort'), code: "selvage view --port 8502" }
   ];
 
   return (
@@ -180,7 +132,7 @@ export function QuickStart() {
                   <CardContent className="flex-grow flex flex-col">
                     <div className="bg-slate-900 rounded-lg p-4 mb-4 h-32 flex flex-col">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-slate-400 text-sm">터미널</span>
+                        <span className="text-slate-400 text-sm">{t('quickStart.terminal')}</span>
                         <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(step.code)}>
                           <Copy className="w-4 h-4" />
                         </Button>
@@ -203,16 +155,16 @@ export function QuickStart() {
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl mb-4 text-slate-900 flex items-center justify-center gap-3">
               <Terminal className="w-8 h-8 text-blue-600" />
-              CLI 사용법
+              {t('quickStart.cliTitle')}
             </h3>
-            <p className="text-lg text-slate-600">Selvage의 다양한 명령어와 옵션을 확인해보세요</p>
+            <p className="text-lg text-slate-600">{t('quickStart.cliDescription')}</p>
           </div>
 
           {/* Selvage 설치하기 */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Download className="w-6 h-6 text-blue-600" />
-              <h4 className="text-xl font-semibold text-slate-900">Selvage 설치하기</h4>
+              <h4 className="text-xl font-semibold text-slate-900">{t('quickStart.installation.title')}</h4>
             </div>
             <div className="space-y-4">
               <Card className="border border-slate-200 hover:border-blue-300 transition-colors bg-white">
@@ -220,32 +172,28 @@ export function QuickStart() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div className="flex-1">
-                      <h5 className="text-lg text-slate-900 mb-2">권장 방법 (uv 사용)</h5>
+                      <h5 className="text-lg text-slate-900 mb-2">{t('quickStart.installation.recommendedMethod.title')}</h5>
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-slate-400 text-sm">명령어</span>
+                          <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                           <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(`curl -LsSf https://astral.sh/uv/install.sh | sh\nuv tool install selvage`)}>
                             <Copy className="w-4 h-4" />
                           </Button>
                         </div>
                         <div className="space-y-2">
-                          <code className="text-blue-400 font-mono text-sm block">
-                            #uv 설치
-                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">{t('quickStart.installation.recommendedMethod.uvInstall')}</code>
                           <code className="text-blue-400 font-mono text-sm block">
                             curl -LsSf https://astral.sh/uv/install.sh | sh 
                           </code>
                           <br></br>
-                          <code className="text-blue-400 font-mono text-sm block">
-                            #selvage 설치
-                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">{t('quickStart.installation.recommendedMethod.selvageInstall')}</code>
                           <code className="text-blue-400 font-mono text-sm block">
                             uv tool install selvage
                           </code>
                         </div>
                       </div>
                       <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
-                        uv는 한 번만 설치하면 됩니다
+                        {t('quickStart.installation.recommendedMethod.note')}
                       </p>
                     </div>
                   </div>
@@ -257,32 +205,28 @@ export function QuickStart() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                     <div className="flex-1">
-                      <h5 className="text-lg text-slate-900 mb-2">대안 방법 (pipx 사용)</h5>
+                      <h5 className="text-lg text-slate-900 mb-2">{t('quickStart.installation.alternativeMethod.title')}</h5>
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-slate-400 text-sm">명령어</span>
+                          <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                           <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(`brew install pipx\npipx install selvage`)}>
                             <Copy className="w-4 h-4" />
                           </Button>
                         </div>
                         <div className="space-y-2">
-                          <code className="text-blue-400 font-mono text-sm block">
-                            #pipx 설치
-                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">{t('quickStart.installation.alternativeMethod.pipxInstall')}</code>
                           <code className="text-blue-400 font-mono text-sm block">
                             brew install pipx
                           </code>
                           <br></br>
-                          <code className="text-blue-400 font-mono text-sm block">
-                            #selvage 설치
-                          </code>
+                          <code className="text-blue-400 font-mono text-sm block">{t('quickStart.installation.alternativeMethod.selvageInstall')}</code>
                           <code className="text-blue-400 font-mono text-sm block">
                             pipx install selvage
                           </code>
                         </div>
                       </div>
                       <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
-                        macOS 사용자를 위한 대안 방법
+                        {t('quickStart.installation.alternativeMethod.note')}
                       </p>
                     </div>
                   </div>
@@ -294,10 +238,10 @@ export function QuickStart() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="w-6 h-6 text-yellow-500 mt-1 flex-shrink-0" />
                     <div className="flex-1">
-                      <h5 className="text-lg text-slate-900 mb-2">전통적 방법 (pip)</h5>
+                      <h5 className="text-lg text-slate-900 mb-2">{t('quickStart.installation.traditionalMethod.title')}</h5>
                       <div className="bg-slate-900 rounded-lg p-4 mb-3">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-slate-400 text-sm">명령어</span>
+                          <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                           <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy("pip install selvage")}>
                             <Copy className="w-4 h-4" />
                           </Button>
@@ -307,7 +251,7 @@ export function QuickStart() {
                         </code>
                       </div>
                       <p className="text-sm text-slate-600 bg-slate-100 px-3 py-2 rounded-md">
-                        ⚠️ 일부 환경에서 externally-managed-environment 에러 발생 가능
+                        {t('quickStart.installation.traditionalMethod.note')}
                       </p>
                     </div>
                   </div>
@@ -320,7 +264,7 @@ export function QuickStart() {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Settings className="w-6 h-6 text-blue-600" />
-              <h4 className="text-xl font-semibold text-slate-900">Selvage 설정하기</h4>
+              <h4 className="text-xl font-semibold text-slate-900">{t('quickStart.configuration.title')}</h4>
             </div>
             <div className="space-y-4">
               {configExamples.map((example, index) => (
@@ -332,7 +276,7 @@ export function QuickStart() {
                         <h5 className="text-lg text-slate-900 mb-2">{example.title}</h5>
                         <div className="bg-slate-900 rounded-lg p-4 mb-3">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-slate-400 text-sm">명령어</span>
+                            <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                             <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                               <Copy className="w-4 h-4" />
                             </Button>
@@ -358,12 +302,12 @@ export function QuickStart() {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Code className="w-6 h-6 text-blue-600" />
-              <h4 className="text-xl font-semibold text-slate-900">코드 리뷰하기</h4>
+              <h4 className="text-xl font-semibold text-slate-900">{t('quickStart.codeReview.title')}</h4>
             </div>
             
             <div className="bg-slate-900 rounded-lg p-6 mb-8">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-slate-400 text-sm">기본 명령어</span>
+                <span className="text-slate-400 text-sm">{t('quickStart.codeReview.basicCommand')}</span>
                 <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy("selvage review [OPTIONS]")}>
                   <Copy className="w-4 h-4" />
                 </Button>
@@ -377,7 +321,7 @@ export function QuickStart() {
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-6">
                 <List className="w-5 h-5 text-blue-600" />
-                <h5 className="text-lg font-semibold text-slate-900">주요 옵션</h5>
+                <h5 className="text-lg font-semibold text-slate-900">{t('quickStart.codeReview.mainOptions')}</h5>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {reviewOptions.map((option, index) => (
@@ -399,7 +343,7 @@ export function QuickStart() {
 
             {/* 사용 예시 */}
             <div>
-              <h5 className="text-lg font-semibold text-slate-900 mb-6">사용 예시</h5>
+              <h5 className="text-lg font-semibold text-slate-900 mb-6">{t('quickStart.codeReview.usageExamples')}</h5>
               <div className="space-y-4">
                 {usageExamples.map((example, index) => (
                   <Card key={index} className="border border-slate-200 hover:border-blue-300 transition-colors bg-white">
@@ -410,7 +354,7 @@ export function QuickStart() {
                           <h6 className="text-lg text-slate-900 mb-2">{example.title}</h6>
                           <div className="bg-slate-900 rounded-lg p-4">
                             <div className="flex items-center justify-between mb-2">
-                              <span className="text-slate-400 text-sm">명령어</span>
+                              <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                               <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                                 <Copy className="w-4 h-4" />
                               </Button>
@@ -452,7 +396,7 @@ export function QuickStart() {
                         <h5 className="text-lg text-slate-900 mb-2">{example.title}</h5>
                         <div className="bg-slate-900 rounded-lg p-4">
                           <div className="flex items-center justify-between mb-2">
-                            <span className="text-slate-400 text-sm">명령어</span>
+                            <span className="text-slate-400 text-sm">{t('quickStart.command')}</span>
                             <Button variant="ghost" size="sm" className="text-slate-400 hover:text-white h-6 w-6 p-0" onClick={() => handleCopy(example.code)}>
                               <Copy className="w-4 h-4" />
                             </Button>

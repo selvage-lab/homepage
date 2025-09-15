@@ -13,8 +13,8 @@ export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
 
   const languages = [
-    { code: 'ko', name: '한국어', flag: '🇰🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' }
+    { code: 'ko', name: t('languages.ko'), flag: '🇰🇷' },
+    { code: 'en', name: t('languages.en'), flag: '🇺🇸' }
   ];
 
   const handleLanguageChange = (languageCode: string) => {

@@ -272,5 +272,9 @@
     "loading": "로딩 중...",
     "copy": "복사",
     "more": "+ More"
+  },
+  "languages": {
+    "ko": "한국어",
+    "en": "English"
   }
 }
