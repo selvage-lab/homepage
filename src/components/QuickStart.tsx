@@ -2,10 +2,11 @@ import React from "react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { 
-  Download, 
-  Key, 
-  Play, 
+import { useTranslation } from 'react-i18next';
+import {
+  Download,
+  Key,
+  Play,
   Copy,
   ArrowRight,
   Terminal,
@@ -16,6 +17,8 @@ import {
 } from "lucide-react";
 
 export function QuickStart() {
+  const { t } = useTranslation();
+
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
       // 복사 성공 시 피드백을 줄 수 있습니다 (선택사항)
@@ -28,24 +31,24 @@ export function QuickStart() {
   const steps = [
     {
       icon: Download,
-      title: "설치",
-      description: "uv로 간단 설치",
+      title: t('quickStart.steps.install.title'),
+      description: t('quickStart.steps.install.description'),
       code: "uv tool install selvage",
-      note: "Python 3.10+ 필요"
+      note: t('quickStart.steps.install.note')
     },
     {
       icon: Key,
-      title: "API 키 설정",
-      description: "OpenRouter API 키 설정",
+      title: t('quickStart.steps.apiKey.title'),
+      description: t('quickStart.steps.apiKey.description'),
       code: "export OPENROUTER_API_KEY=\"your_openrouter_api_key_here\"",
-      note: "다양한 AI 모델 사용 가능"
+      note: t('quickStart.steps.apiKey.note')
     },
     {
       icon: Play,
-      title: "코드 리뷰 시작",
-      description: "AI 코드 리뷰 실행",
+      title: t('quickStart.steps.start.title'),
+      description: t('quickStart.steps.start.description'),
       code: "selvage review --model claude-sonnet-4-thinking",
-      note: "터미널에 즉시 출력"
+      note: t('quickStart.steps.start.note')
     }
   ];
 
@@ -147,10 +150,10 @@ export function QuickStart() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
-            <span className="text-blue-600">Quick Start</span>
+            <span className="text-blue-600">{t('quickStart.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            복잡한 설정 없이 몇 분 안에 AI 기반 코드 리뷰를 시작할 수 있습니다
+            {t('quickStart.subtitle')}
           </p>
         </div>
 
@@ -427,12 +430,16 @@ export function QuickStart() {
 
           {/* 결과 확인하기 */}
           <div>
-            <h4 className="text-xl font-semibold text-slate-900 mb-6">결과 확인하기</h4>
+            <h4 className="text-xl font-semibold text-slate-900 mb-6">{t('quickStart.results.title')}</h4>
             <p className="text-slate-600 mb-6">
-              리뷰 결과는 <strong>터미널에 바로 출력</strong>되며, 동시에 파일로도 자동 저장됩니다.
+              {t('quickStart.results.descriptionPrefix')}
+              <strong>{t('quickStart.results.descriptionBold')}</strong>
+              {t('quickStart.results.descriptionSuffix')}
             </p>
             <p className="text-slate-600 mb-8">
-              <strong>추가적인 리뷰 관리 및 재확인</strong>을 위해 웹 UI를 사용할 수 있습니다:
+              {t('quickStart.results.additionalInfoPrefix')}
+              <strong>{t('quickStart.results.additionalInfoBold')}</strong>
+              {t('quickStart.results.additionalInfoSuffix')}
             </p>
             
             <div className="space-y-4">

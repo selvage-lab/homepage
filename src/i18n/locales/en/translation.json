@@ -1,0 +1,277 @@
+{
+  "nav": {
+    "quickStart": "Quick Start",
+    "github": "GitHub",
+    "start": "Start",
+    "changeLanguage": "Change Language"
+  },
+  "hero": {
+    "titlePrefix": "AI Code Review, ",
+    "titleHighlight": "Start Now",
+    "subtitle1": "Selvage is an AI code review CLI tool.",
+    "subtitle2": "Get instant feedback without waiting for reviews.",
+    "subtitle3": "Pay per usage without subscriptions.",
+    "subtitle4": "AI analyzes your code changes to improve quality and prevent bugs."
+  },
+  "demo": {
+    "titlePrefix": "Code Review ",
+    "titleHighlight": "with an Edge!",
+    "subtitle": "Analyze code changes and receive quality improvement suggestions with a simple command",
+    "terminalTitle": "selvage CLI"
+  },
+  "features": {
+    "titlePrefix": "What Makes ",
+    "titleHighlight": "Selvage",
+    "titleSuffix": " Special",
+    "subtitle": "Cutting-edge AI technology meets developer-friendly workflows to deliver a completely new code review experience",
+    "items": {
+      "aiModels": {
+        "title": "Multiple AI Model Support",
+        "description": "Leverage latest LLM models including OpenAI GPT-5, Anthropic Claude Sonnet-4, Google Gemini",
+        "badge": "Latest AI"
+      },
+      "gitWorkflow": {
+        "title": "Git Workflow Integration",
+        "description": "Supports analysis of staged, unstaged, and specific commit/branch changes",
+        "badge": "Developer Friendly"
+      },
+      "codeReview": {
+        "title": "Comprehensive Code Review",
+        "description": "Detects bugs and logic errors, suggests code quality and readability improvements",
+        "badge": "Bug Detection"
+      },
+      "smartContext": {
+        "title": "Smart Context",
+        "description": "Provides optimized context based on Tree-sitter AST analysis",
+        "badge": "Optimized"
+      },
+      "largeContext": {
+        "title": "Large Context Review",
+        "description": "Stable large-scale code review support even when exceeding model context limits",
+        "badge": "Large Code Review"
+      },
+      "opensource": {
+        "title": "Open Source",
+        "description": "Free to use and modify under Apache-2.0 license",
+        "badge": "Apache-2.0"
+      }
+    }
+  },
+  "techSupport": {
+    "smartContext": {
+      "titlePrefix": "Smart Context",
+      "titleSuffix": " Feature",
+      "introPrefix": "Selvage uses ",
+      "introBold1": "AST",
+      "introMiddle": " to precisely extract only the code blocks related to changed lines, ",
+      "introBold2": "ensuring both cost efficiency and review quality",
+      "introSuffix": ".",
+      "howItWorks": {
+        "title": "How Smart Context Works",
+        "preciseExtraction": {
+          "title": "Precise Extraction",
+          "description": "Extracts only the minimal function/class blocks containing changed lines and related dependencies (e.g., import statements)"
+        },
+        "costOptimization": {
+          "title": "Cost Optimization",
+          "description": "Significantly reduces token usage by sending only necessary context instead of entire files"
+        },
+        "qualityAssurance": {
+          "title": "Quality Assurance",
+          "description": "Maintains high review accuracy through AST-based precise code structure understanding"
+        }
+      },
+      "autoApplication": {
+        "title": "Smart Context Auto Application",
+        "descriptionPrefix": "Selvage analyzes file size and change scope to ",
+        "descriptionBold": "automatically select the most efficient review method",
+        "descriptionSuffix": ":",
+        "strategies": {
+          "smallChanges": {
+            "title": "Small Changes",
+            "description": "Fast and accurate analysis with Smart Context"
+          },
+          "smallFiles": {
+            "title": "Small Files",
+            "description": "Complete context understanding through full file analysis"
+          },
+          "largeFilesPartial": {
+            "title": "Partial Changes in Large Files",
+            "description": "Focused analysis of related code only with Smart Context"
+          },
+          "largeFilesLarge": {
+            "title": "Large Changes in Large Files",
+            "description": "Comprehensive review through full file analysis"
+          }
+        },
+        "autoOptimizationPrefix": "",
+        "autoOptimizationBold": "Auto Optimization",
+        "autoOptimizationSuffix": ": The optimal analysis method for each situation is automatically applied without additional configuration."
+      },
+      "languageSupport": {
+        "smartContextTitle": "Smart Context Supported Languages",
+        "generalContextTitle": "General Context Extraction Supported Languages",
+        "generalContextSubtitle": "Supports general context extraction for major programming languages",
+        "conclusionPrefix": "Provides ",
+        "conclusionBold1": "excellent code review quality",
+        "conclusionMiddle": " in major programming languages through ",
+        "conclusionBold2": "general context extraction methods",
+        "conclusionMiddle2": ".<br />Smart Context supported languages are continuously ",
+        "conclusionBold3": "expanding",
+        "conclusionSuffix": "."
+      }
+    },
+    "aiModels": {
+      "titlePrefix": "Latest ",
+      "titleHighlight": "AI Models",
+      "titleSuffix": " Support",
+      "subtitle": "Easily use various cutting-edge AI models with a single API key through OpenRouter integration",
+      "openRouterInfo": {
+        "title": "Manage all models below with one OpenRouter API key!",
+        "description": "Access all AI models with a single API key through OpenRouter. Individual Provider API keys are also supported."
+      },
+      "categories": {
+        "openai": {
+          "title": "OpenAI Models",
+          "subtitle": "(OpenRouter or OpenAI API Key)"
+        },
+        "anthropic": {
+          "title": "Anthropic Models",
+          "subtitle": "(OpenRouter or Anthropic API Key)"
+        },
+        "google": {
+          "title": "Google Models",
+          "subtitle": "(OpenRouter or Google API Key)"
+        },
+        "openrouter": {
+          "title": "OpenRouter Provided Models",
+          "subtitle": "(OpenRouter API Key Required)"
+        }
+      },
+      "models": {
+        "gpt5High": "High-accuracy reasoning model (400K context)",
+        "gpt5": "Latest advanced reasoning model (400K context)",
+        "gpt5Mini": "Lightweight fast response model (400K context)",
+        "claudeSonnet4Thinking": "Extended thinking process support (200K context)",
+        "claudeSonnet4": "Hybrid reasoning model optimized for advanced coding (200K context)",
+        "gemini25Pro": "Large context and advanced reasoning (1M+ tokens)",
+        "gemini25Flash": "Optimized for response speed and cost efficiency (1M+ tokens)",
+        "qwen3Coder": "480B parameter MoE coding-specialized model (1M+ tokens)",
+        "kimiK2": "1T parameter MoE large-scale reasoning model (128K tokens)"
+      },
+      "recommended": "Recommended"
+    }
+  },
+  "quickStart": {
+    "titlePrefix": "",
+    "titleHighlight": "Quick Start",
+    "titleSuffix": "",
+    "subtitle": "Start AI-powered code reviews in minutes without complex setup",
+    "steps": {
+      "install": {
+        "title": "Installation",
+        "description": "Simple installation with uv",
+        "note": "Python 3.10+ required"
+      },
+      "apiKey": {
+        "title": "API Key Setup",
+        "description": "Set OpenRouter API key",
+        "note": "Access to various AI models"
+      },
+      "start": {
+        "title": "Start Code Review",
+        "description": "Run AI code review",
+        "note": "Instant terminal output"
+      }
+    },
+    "installation": {
+      "title": "Installing Selvage",
+      "recommendedMethod": {
+        "title": "Recommended Method (using uv)",
+        "uvInstall": "# Install uv",
+        "selvageInstall": "# Install selvage",
+        "note": "uv only needs to be installed once"
+      },
+      "alternativeMethod": {
+        "title": "Alternative Method (using pipx)",
+        "pipxInstall": "# Install pipx",
+        "selvageInstall": "# Install selvage",
+        "note": "Alternative method for macOS users"
+      },
+      "traditionalMethod": {
+        "title": "Traditional Method (pip)",
+        "note": "⚠️ May encounter externally-managed-environment error in some environments"
+      }
+    },
+    "configuration": {
+      "title": "Configuring Selvage",
+      "viewAllSettings": "View all settings",
+      "setDefaultModel": "Set default model",
+      "setLanguage": "Set review result language",
+      "examples": {
+        "model": "Example: claude-sonnet-4-thinking",
+        "language": "Example: English, Korean"
+      }
+    },
+    "codeReview": {
+      "title": "Code Review",
+      "basicCommand": "Basic command",
+      "mainOptions": "Main options",
+      "usageExamples": "Usage examples",
+      "options": {
+        "repoPath": "Git repository path (default: current directory)",
+        "staged": "Review only staged changes",
+        "targetCommit": "Review changes from specific commit to HEAD (e.g., abc1234)",
+        "targetBranch": "Review changes between current branch and specified branch (e.g., main)",
+        "model": "AI model to use (e.g., claude-sonnet-4-thinking)",
+        "openUi": "Automatically launch UI after review completion",
+        "noPrint": "Do not output review results to terminal (terminal output enabled by default)",
+        "skipCache": "Perform new review without using cache"
+      },
+      "examples": {
+        "currentDir": "Review current working directory changes",
+        "preCommit": "Final check before commit",
+        "specificFiles": "Review specific files only",
+        "prReview": "Code review before sending PR",
+        "fastModel": "Review simple changes with fast and economical model",
+        "webUi": "Detailed review check with web UI after review"
+      }
+    },
+    "results": {
+      "title": "Checking Results",
+      "descriptionPrefix": "Review results are ",
+      "descriptionBold": "immediately output to the terminal",
+      "descriptionSuffix": " and automatically saved to files.",
+      "additionalInfoPrefix": "You can use the web UI for ",
+      "additionalInfoBold": "additional review management and re-checking",
+      "additionalInfoSuffix": ":",
+      "examples": {
+        "webUiManagement": "Manage all saved review results with web UI",
+        "differentPort": "Run UI on different port"
+      }
+    },
+    "terminal": "Terminal",
+    "command": "Command",
+    "copy": "Copy"
+  },
+  "footer": {
+    "links": {
+      "github": "GitHub",
+      "contact": "Contact",
+      "issues": "Issues",
+      "releases": "Releases",
+      "pypi": "PyPI"
+    },
+    "copyright": "© 2025 Selvage",
+    "license": "Apache-2.0 License",
+    "madeWith": "Made with",
+    "forDevelopers": "for developers",
+    "starMessage": "If you like this project, please give us a star!",
+    "starButton": "Star on GitHub"
+  },
+  "common": {
+    "loading": "Loading...",
+    "copy": "Copy",
+    "more": "+ More"
+  }
+}

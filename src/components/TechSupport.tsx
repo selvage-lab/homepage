@@ -1,8 +1,9 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { 
-  Code, 
-  Brain, 
+import { useTranslation } from 'react-i18next';
+import {
+  Code,
+  Brain,
   FileCode,
   Star,
   Zap,
@@ -12,32 +13,34 @@ import {
 } from "lucide-react";
 
 export function SmartContext() {
+  const { t } = useTranslation();
+
   const astLanguages = [
     "Python", "JavaScript", "TypeScript", "Java", "Kotlin"
   ];
 
   const allLanguages = [
     "Go", "Ruby", "PHP", "C#", "C/C++", "Rust", "Swift", "Dart",
-    "HTML", "CSS", "Markdown", "JSON", "YAML", "XML", 
+    "HTML", "CSS", "Markdown", "JSON", "YAML", "XML",
     "Shell", "SQL", "Dockerfile"
   ];
 
   const contextStrategies = [
     {
-      title: "작은 변경사항",
-      description: "Smart Context로 빠르고 정확한 분석"
+      title: t('techSupport.smartContext.autoApplication.strategies.smallChanges.title'),
+      description: t('techSupport.smartContext.autoApplication.strategies.smallChanges.description')
     },
     {
-      title: "작은 파일",
-      description: "전체 파일 분석으로 완전한 맥락 파악"
+      title: t('techSupport.smartContext.autoApplication.strategies.smallFiles.title'),
+      description: t('techSupport.smartContext.autoApplication.strategies.smallFiles.description')
     },
     {
-      title: "큰 파일의 부분 수정",
-      description: "Smart Context로 관련 코드만 집중 분석"
+      title: t('techSupport.smartContext.autoApplication.strategies.largeFilesPartial.title'),
+      description: t('techSupport.smartContext.autoApplication.strategies.largeFilesPartial.description')
     },
     {
-      title: "큰 파일의 대규모 변경",
-      description: "전체 파일 분석으로 종합적 검토"
+      title: t('techSupport.smartContext.autoApplication.strategies.largeFilesLarge.title'),
+      description: t('techSupport.smartContext.autoApplication.strategies.largeFilesLarge.description')
     }
   ];
 
@@ -46,7 +49,7 @@ export function SmartContext() {
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
-            <span className="text-blue-600">Smart Context</span> 기능
+            <span className="text-blue-600">{t('techSupport.smartContext.titlePrefix')}</span>{t('techSupport.smartContext.titleSuffix')}
           </h2>
         </div>
 
@@ -54,8 +57,11 @@ export function SmartContext() {
           {/* 소개 카드 */}
           <div className="p-6 bg-blue-50 rounded-lg mb-10">
                 <p className="text-blue-900 text-lg leading-relaxed">
-                  Selvage는 <strong>AST</strong>를 활용해 변경된 라인과 관련된 코드 블록만 정확히 추출하여, 
-                  <strong className="text-blue-700"> 비용 효율성과 리뷰 품질을 동시에 보장</strong>합니다.
+                  {t('techSupport.smartContext.introPrefix')}
+                  <strong>{t('techSupport.smartContext.introBold1')}</strong>
+                  {t('techSupport.smartContext.introMiddle')}
+                  <strong>{t('techSupport.smartContext.introBold2')}</strong>
+                  {t('techSupport.smartContext.introSuffix')}
                 </p>
           </div>
 
@@ -64,29 +70,29 @@ export function SmartContext() {
             <CardContent className="p-8">
               <h4 className="text-2xl font-semibold text-slate-900 mb-6 flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-600" />
-                <span>Smart Context 작동 방식</span>
+                <span>{t('techSupport.smartContext.howItWorks.title')}</span>
               </h4>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="p-6 bg-white rounded-lg border border-slate-200 hover:shadow-md transition-shadow">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#10b981' }}></div>
-                    <span className="font-semibold text-slate-900 text-lg">정밀 추출</span>
+                    <span className="font-semibold text-slate-900 text-lg">{t('techSupport.smartContext.howItWorks.preciseExtraction.title')}</span>
                   </div>
-                  <p className="text-slate-600 text-base leading-relaxed">변경된 라인이 속한 최소 함수/클래스 블록과 관련 의존성(e.g.import 구문 등)만 추출</p>
+                  <p className="text-slate-600 text-base leading-relaxed">{t('techSupport.smartContext.howItWorks.preciseExtraction.description')}</p>
                 </div>
                 <div className="p-6 bg-white rounded-lg border border-slate-200 hover:shadow-md transition-shadow">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#3b82f6' }}></div>
-                    <span className="font-semibold text-slate-900 text-lg">비용 최적화</span>
+                    <span className="font-semibold text-slate-900 text-lg">{t('techSupport.smartContext.howItWorks.costOptimization.title')}</span>
                   </div>
-                  <p className="text-slate-600 text-base leading-relaxed">전체 파일 대신 필요한 컨텍스트만 전송하여 토큰 사용량 대폭 절감</p>
+                  <p className="text-slate-600 text-base leading-relaxed">{t('techSupport.smartContext.howItWorks.costOptimization.description')}</p>
                 </div>
                 <div className="p-6 bg-white rounded-lg border border-slate-200 hover:shadow-md transition-shadow">
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-4 h-4 rounded-full" style={{ backgroundColor: '#a855f7' }}></div>
-                    <span className="font-semibold text-slate-900 text-lg">품질 보장</span>
+                    <span className="font-semibold text-slate-900 text-lg">{t('techSupport.smartContext.howItWorks.qualityAssurance.title')}</span>
                   </div>
-                  <p className="text-slate-600 text-base leading-relaxed">AST 기반 정확한 코드 구조 이해로 높은 리뷰 정확도 유지</p>
+                  <p className="text-slate-600 text-base leading-relaxed">{t('techSupport.smartContext.howItWorks.qualityAssurance.description')}</p>
                 </div>
               </div>
             </CardContent>
@@ -97,11 +103,13 @@ export function SmartContext() {
             <CardContent className="p-8">
               <h4 className="text-2xl font-semibold text-slate-900 mb-6 flex items-center space-x-3">
                 <Brain className="w-6 h-6 text-blue-600" />
-                <span>Smart Context 자동 적용</span>
+                <span>{t('techSupport.smartContext.autoApplication.title')}</span>
               </h4>
               <div className="px-6 py-1 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg mb-2">
                 <p className="text-slate-800 mb-6 text-lg leading-relaxed">
-                  Selvage는 파일 크기와 변경 범위를 분석하여 <strong>가장 효율적인 리뷰 방식을 자동 선택</strong>합니다:
+                  {t('techSupport.smartContext.autoApplication.descriptionPrefix')}
+                  <strong>{t('techSupport.smartContext.autoApplication.descriptionBold')}</strong>
+                  {t('techSupport.smartContext.autoApplication.descriptionSuffix')}
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   {contextStrategies.map((strategy, index) => {
@@ -130,7 +138,10 @@ export function SmartContext() {
               <div className="px-6 py-4 bg-green-50 rounded-lg">
                 <p className="text-green-800 flex items-center space-x-3 text-lg leading-relaxed">
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                  <span><strong>자동 최적화</strong>: 별도 설정 없이 상황에 맞는 최적의 분석 방식이 자동 적용됩니다.</span>
+                  <span>
+                    <strong>{t('techSupport.smartContext.autoApplication.autoOptimizationBold')}</strong>
+                    {t('techSupport.smartContext.autoApplication.autoOptimizationSuffix')}
+                  </span>
                 </p>
               </div>
             </CardContent>
@@ -176,8 +187,12 @@ export function SmartContext() {
               {/* 마무리 메시지 서브섹션 */}
               <div className="mt-8 pt-6 border-slate-200">
                   <p className="text-slate-800 text-lg leading-relaxed">
-                    <strong className="text-blue-700"> 범용 컨텍스트 추출 방식</strong>으로 주요 프로그래밍 언어에서 <strong>우수한 코드 리뷰 품질</strong>을 제공합니다.<br />
-                    Smart Context 지원 언어는 지속적으로 <strong>확장</strong>하고 있습니다.
+                    <strong className="text-blue-700">{t('techSupport.smartContext.languageSupport.conclusionBold1')}</strong>
+                    {t('techSupport.smartContext.languageSupport.conclusionMiddle')}
+                    <strong>{t('techSupport.smartContext.languageSupport.conclusionBold2')}</strong>
+                    {t('techSupport.smartContext.languageSupport.conclusionMiddle2')}
+                    <strong>{t('techSupport.smartContext.languageSupport.conclusionBold3')}</strong>
+                    {t('techSupport.smartContext.languageSupport.conclusionSuffix')}
                   </p>
               </div>
             </CardContent>
@@ -189,6 +204,8 @@ export function SmartContext() {
 }
 
 export function AIModels() {
+  const { t } = useTranslation();
+
   const aiModels = [
     {
       category: "OpenAI 모델",
@@ -231,10 +248,10 @@ export function AIModels() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
-            최신 <span className="text-blue-600">AI 모델</span> 지원
+            {t('techSupport.aiModels.titlePrefix')}<span className="text-blue-600">{t('techSupport.aiModels.titleHighlight')}</span>{t('techSupport.aiModels.titleSuffix')}
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            OpenRouter 통합으로 다양한 최신 AI 모델을 하나의 API 키로 간편하게 사용하세요
+            {t('techSupport.aiModels.subtitle')}
           </p>
         </div>
 

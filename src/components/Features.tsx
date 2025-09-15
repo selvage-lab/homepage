@@ -1,53 +1,56 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { 
-  Bot, 
-  GitBranch, 
-  Bug, 
-  Target, 
-  RotateCcw, 
+import { useTranslation } from 'react-i18next';
+import {
+  Bot,
+  GitBranch,
+  Bug,
+  Target,
+  RotateCcw,
   BookOpen,
   Cpu,
   Shield
 } from "lucide-react";
 
 export function Features() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: Bot,
-      title: "다양한 AI 모델 지원",
-      description: "OpenAI GPT-5, Anthropic Claude Sonnet-4, Google Gemini 등 최신 LLM 모델 활용",
-      badge: "최신 AI"
+      title: t('features.items.aiModels.title'),
+      description: t('features.items.aiModels.description'),
+      badge: t('features.items.aiModels.badge')
     },
     {
       icon: GitBranch,
-      title: "Git 워크플로우 통합",
-      description: "staged, unstaged, 특정 커밋/브랜치 간 변경사항 분석 지원",
-      badge: "개발자 친화적"
+      title: t('features.items.gitWorkflow.title'),
+      description: t('features.items.gitWorkflow.description'),
+      badge: t('features.items.gitWorkflow.badge')
     },
     {
       icon: Bug,
-      title: "포괄적 코드 검토",
-      description: "버그 및 논리 오류 탐지, 코드 품질 및 가독성 향상 제안",
-      badge: "버그 탐지"
+      title: t('features.items.codeReview.title'),
+      description: t('features.items.codeReview.description'),
+      badge: t('features.items.codeReview.badge')
     },
     {
       icon: Target,
-      title: "Smart Context",
-      description: "Tree-sitter 기반 AST 분석을 통해 상황에 따라 최적화된 컨텍스트 제공",
-      badge: "최적화"
+      title: t('features.items.smartContext.title'),
+      description: t('features.items.smartContext.description'),
+      badge: t('features.items.smartContext.badge')
     },
     {
       icon: RotateCcw,
-      title: "Large Context Review",
-      description: "모델의 Context Limit 초과 시에도 안정적인 대용량 코드 리뷰 지원",
-      badge: "대용량 코드 리뷰"
+      title: t('features.items.largeContext.title'),
+      description: t('features.items.largeContext.description'),
+      badge: t('features.items.largeContext.badge')
     },
     {
       icon: BookOpen,
-      title: "오픈소스",
-      description: "Apache-2.0 라이선스로 자유롭게 사용 및 수정 가능",
-      badge: "Apache-2.0"
+      title: t('features.items.opensource.title'),
+      description: t('features.items.opensource.description'),
+      badge: t('features.items.opensource.badge')
     }
   ];
 
@@ -56,10 +59,10 @@ export function Features() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
-            <span className="text-blue-600">Selvage</span>가 특별한 이유
+            {t('features.titlePrefix')}<span className="text-blue-600">{t('features.titleHighlight')}</span>{t('features.titleSuffix')}
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            최신 AI 기술과 개발자 친화적인 워크플로우가 만나 완전히 새로운 코드 리뷰 경험을 제공합니다
+            {t('features.subtitle')}
           </p>
         </div>
 

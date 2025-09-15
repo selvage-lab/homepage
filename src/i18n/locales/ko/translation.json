@@ -1,0 +1,276 @@
+{
+  "nav": {
+    "quickStart": "Quick Start",
+    "github": "GitHub",
+    "start": "시작",
+    "changeLanguage": "언어 변경"
+  },
+  "hero": {
+    "titlePrefix": "AI 코드 리뷰, ",
+    "titleHighlight": "지금 시작하세요",
+    "subtitle1": "Selvage는 AI 코드 리뷰 CLI 입니다.",
+    "subtitle2": "리뷰 대기 없이 즉시 피드백을 받으세요.",
+    "subtitle3": "구독 없이 사용량 기반으로 지불합니다.",
+    "subtitle4": "AI가 변경된 코드를 분석해 품질을 높이고 버그를 미리 막습니다."
+  },
+  "demo": {
+    "titlePrefix": "코드 리뷰도 ",
+    "titleHighlight": "엣지있게!",
+    "subtitle": "간단한 명령어 하나로 코드 변경사항을 분석하고, 품질 개선 제안을 받아보세요",
+    "terminalTitle": "selvage CLI"
+  },
+  "features": {
+    "titlePrefix": "Selvage",
+    "titleSuffix": "가 특별한 이유",
+    "subtitle": "최신 AI 기술과 개발자 친화적인 워크플로우가 만나 완전히 새로운 코드 리뷰 경험을 제공합니다",
+    "items": {
+      "aiModels": {
+        "title": "다양한 AI 모델 지원",
+        "description": "OpenAI GPT-5, Anthropic Claude Sonnet-4, Google Gemini 등 최신 LLM 모델 활용",
+        "badge": "최신 AI"
+      },
+      "gitWorkflow": {
+        "title": "Git 워크플로우 통합",
+        "description": "staged, unstaged, 특정 커밋/브랜치 간 변경사항 분석 지원",
+        "badge": "개발자 친화적"
+      },
+      "codeReview": {
+        "title": "포괄적 코드 검토",
+        "description": "버그 및 논리 오류 탐지, 코드 품질 및 가독성 향상 제안",
+        "badge": "버그 탐지"
+      },
+      "smartContext": {
+        "title": "Smart Context",
+        "description": "Tree-sitter 기반 AST 분석을 통해 상황에 따라 최적화된 컨텍스트 제공",
+        "badge": "최적화"
+      },
+      "largeContext": {
+        "title": "Large Context Review",
+        "description": "모델의 Context Limit 초과 시에도 안정적인 대용량 코드 리뷰 지원",
+        "badge": "대용량 코드 리뷰"
+      },
+      "opensource": {
+        "title": "오픈소스",
+        "description": "Apache-2.0 라이선스로 자유롭게 사용 및 수정 가능",
+        "badge": "Apache-2.0"
+      }
+    }
+  },
+  "techSupport": {
+    "smartContext": {
+      "titlePrefix": "Smart Context",
+      "titleSuffix": " 기능",
+      "introPrefix": "Selvage는 ",
+      "introBold1": "AST",
+      "introMiddle": "를 활용해 변경된 라인과 관련된 코드 블록만 정확히 추출하여, ",
+      "introBold2": "비용 효율성과 리뷰 품질을 동시에 보장",
+      "introSuffix": "합니다.",
+      "howItWorks": {
+        "title": "Smart Context 작동 방식",
+        "preciseExtraction": {
+          "title": "정밀 추출",
+          "description": "변경된 라인이 속한 최소 함수/클래스 블록과 관련 의존성(e.g.import 구문 등)만 추출"
+        },
+        "costOptimization": {
+          "title": "비용 최적화",
+          "description": "전체 파일 대신 필요한 컨텍스트만 전송하여 토큰 사용량 대폭 절감"
+        },
+        "qualityAssurance": {
+          "title": "품질 보장",
+          "description": "AST 기반 정확한 코드 구조 이해로 높은 리뷰 정확도 유지"
+        }
+      },
+      "autoApplication": {
+        "title": "Smart Context 자동 적용",
+        "descriptionPrefix": "Selvage는 파일 크기와 변경 범위를 분석하여 ",
+        "descriptionBold": "가장 효율적인 리뷰 방식을 자동 선택",
+        "descriptionSuffix": "합니다:",
+        "strategies": {
+          "smallChanges": {
+            "title": "작은 변경사항",
+            "description": "Smart Context로 빠르고 정확한 분석"
+          },
+          "smallFiles": {
+            "title": "작은 파일",
+            "description": "전체 파일 분석으로 완전한 맥락 파악"
+          },
+          "largeFilesPartial": {
+            "title": "큰 파일의 부분 수정",
+            "description": "Smart Context로 관련 코드만 집중 분석"
+          },
+          "largeFilesLarge": {
+            "title": "큰 파일의 대규모 변경",
+            "description": "전체 파일 분석으로 종합적 검토"
+          }
+        },
+        "autoOptimizationPrefix": "",
+        "autoOptimizationBold": "자동 최적화",
+        "autoOptimizationSuffix": ": 별도 설정 없이 상황에 맞는 최적의 분석 방식이 자동 적용됩니다."
+      },
+      "languageSupport": {
+        "smartContextTitle": "Smart Context 지원 언어",
+        "generalContextTitle": "범용 컨텍스트 추출 지원 언어",
+        "generalContextSubtitle": "주요 프로그래밍 언어들의 범용 컨텍스트 추출을 지원합니다",
+        "conclusionPrefix": "",
+        "conclusionBold1": "범용 컨텍스트 추출 방식",
+        "conclusionMiddle": "으로 주요 프로그래밍 언어에서 ",
+        "conclusionBold2": "우수한 코드 리뷰 품질",
+        "conclusionMiddle2": "을 제공합니다.<br />Smart Context 지원 언어는 지속적으로 ",
+        "conclusionBold3": "확장",
+        "conclusionSuffix": "하고 있습니다."
+      }
+    },
+    "aiModels": {
+      "titlePrefix": "최신 ",
+      "titleHighlight": "AI 모델",
+      "titleSuffix": " 지원",
+      "subtitle": "OpenRouter 통합으로 다양한 최신 AI 모델을 하나의 API 키로 간편하게 사용하세요",
+      "openRouterInfo": {
+        "title": "OpenRouter API 키 하나로 아래 모든 모델을 통합 관리하세요!",
+        "description": "OpenRouter를 통해 하나의 API 키로 모든 AI 모델에 접근할 수 있습니다. 개별 Provider API 키도 지원합니다."
+      },
+      "categories": {
+        "openai": {
+          "title": "OpenAI 모델",
+          "subtitle": "(OpenRouter 또는 OpenAI API 키)"
+        },
+        "anthropic": {
+          "title": "Anthropic 모델",
+          "subtitle": "(OpenRouter 또는 Anthropic API 키)"
+        },
+        "google": {
+          "title": "Google 모델",
+          "subtitle": "(OpenRouter 또는 Google API 키)"
+        },
+        "openrouter": {
+          "title": "OpenRouter 제공 모델",
+          "subtitle": "(OpenRouter API 키 필요)"
+        }
+      },
+      "models": {
+        "gpt5High": "높은 정확도의 추론 모델 (400K 컨텍스트)",
+        "gpt5": "최신 고급 추론 모델 (400K 컨텍스트)",
+        "gpt5Mini": "경량화된 빠른 응답 모델 (400K 컨텍스트)",
+        "claudeSonnet4Thinking": "확장 사고 프로세스 지원 (200K 컨텍스트)",
+        "claudeSonnet4": "하이브리드 추론 모델로 고급 코딩 최적화 (200K 컨텍스트)",
+        "gemini25Pro": "대용량 컨텍스트 및 고급 추론 (1M+ 토큰)",
+        "gemini25Flash": "응답 속도와 비용 효율성 최적화 (1M+ 토큰)",
+        "qwen3Coder": "480B 파라미터 MoE 코딩 특화 모델 (1M+ 토큰)",
+        "kimiK2": "1T 파라미터 MoE 대용량 추론 모델 (128K 토큰)"
+      },
+      "recommended": "추천"
+    }
+  },
+  "quickStart": {
+    "titlePrefix": "",
+    "titleHighlight": "Quick Start",
+    "titleSuffix": "",
+    "subtitle": "복잡한 설정 없이 몇 분 안에 AI 기반 코드 리뷰를 시작할 수 있습니다",
+    "steps": {
+      "install": {
+        "title": "설치",
+        "description": "uv로 간단 설치",
+        "note": "Python 3.10+ 필요"
+      },
+      "apiKey": {
+        "title": "API 키 설정",
+        "description": "OpenRouter API 키 설정",
+        "note": "다양한 AI 모델 사용 가능"
+      },
+      "start": {
+        "title": "코드 리뷰 시작",
+        "description": "AI 코드 리뷰 실행",
+        "note": "터미널에 즉시 출력"
+      }
+    },
+    "installation": {
+      "title": "Selvage 설치하기",
+      "recommendedMethod": {
+        "title": "권장 방법 (uv 사용)",
+        "uvInstall": "#uv 설치",
+        "selvageInstall": "#selvage 설치",
+        "note": "uv는 한 번만 설치하면 됩니다"
+      },
+      "alternativeMethod": {
+        "title": "대안 방법 (pipx 사용)",
+        "pipxInstall": "#pipx 설치",
+        "selvageInstall": "#selvage 설치",
+        "note": "macOS 사용자를 위한 대안 방법"
+      },
+      "traditionalMethod": {
+        "title": "전통적 방법 (pip)",
+        "note": "⚠️ 일부 환경에서 externally-managed-environment 에러 발생 가능"
+      }
+    },
+    "configuration": {
+      "title": "Selvage 설정하기",
+      "viewAllSettings": "모든 설정 보기",
+      "setDefaultModel": "기본 모델 설정",
+      "setLanguage": "리뷰 결과 언어 설정",
+      "examples": {
+        "model": "예시: claude-sonnet-4-thinking",
+        "language": "예시: English, Korean"
+      }
+    },
+    "codeReview": {
+      "title": "코드 리뷰하기",
+      "basicCommand": "기본 명령어",
+      "mainOptions": "주요 옵션",
+      "usageExamples": "사용 예시",
+      "options": {
+        "repoPath": "Git 저장소 경로 (기본값: 현재 디렉토리)",
+        "staged": "스테이징된 변경사항만 리뷰",
+        "targetCommit": "특정 커밋부터 HEAD까지의 변경사항 리뷰 (예: abc1234)",
+        "targetBranch": "현재 브랜치와 지정된 브랜치 간 변경사항 리뷰 (예: main)",
+        "model": "사용할 AI 모델 (예: claude-sonnet-4-thinking)",
+        "openUi": "리뷰 완료 후 자동으로 UI 실행",
+        "noPrint": "터미널에 리뷰 결과를 출력하지 않음 (기본적으로 터미널 출력 활성화)",
+        "skipCache": "캐시를 사용하지 않고 새로운 리뷰 수행"
+      },
+      "examples": {
+        "currentDir": "현재 워킹 디렉토리 변경사항 리뷰",
+        "preCommit": "커밋 전 최종 점검",
+        "specificFiles": "특정 파일들만 리뷰",
+        "prReview": "PR 보내기 전 코드 리뷰",
+        "fastModel": "빠르고 경제적인 모델로 간단한 변경사항 리뷰",
+        "webUi": "리뷰 후 웹 UI로 자세히 확인"
+      }
+    },
+    "results": {
+      "title": "결과 확인하기",
+      "descriptionPrefix": "리뷰 결과는 ",
+      "descriptionBold": "터미널에 바로 출력",
+      "descriptionSuffix": "되며, 동시에 파일로도 자동 저장됩니다.",
+      "additionalInfoPrefix": "",
+      "additionalInfoBold": "추가적인 리뷰 관리 및 재확인",
+      "additionalInfoSuffix": "을 위해 웹 UI를 사용할 수 있습니다:",
+      "examples": {
+        "webUiManagement": "저장된 모든 리뷰 결과를 웹 UI로 관리",
+        "differentPort": "다른 포트에서 UI 실행"
+      }
+    },
+    "terminal": "터미널",
+    "command": "명령어",
+    "copy": "복사"
+  },
+  "footer": {
+    "links": {
+      "github": "GitHub",
+      "contact": "Contact",
+      "issues": "Issues",
+      "releases": "Releases",
+      "pypi": "PyPI"
+    },
+    "copyright": "© 2025 Selvage",
+    "license": "Apache-2.0 License",
+    "madeWith": "Made with",
+    "forDevelopers": "for developers",
+    "starMessage": "If you like this project, please give us a star!",
+    "starButton": "Star on GitHub"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "copy": "복사",
+    "more": "+ More"
+  }
+}

@@ -6,12 +6,14 @@ import { TechSupport } from "./components/TechSupport";
 import { QuickStart } from "./components/QuickStart";
 import { Footer } from "./components/Footer";
 import { TopNavigation } from "./components/TopNavigation";
+import { SEOHead } from "./components/SEOHead";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead />
       <TopNavigation />
-      
+
       {/* Add top padding to prevent content overlap */}
       <div className="pt-20">
         <Hero />
