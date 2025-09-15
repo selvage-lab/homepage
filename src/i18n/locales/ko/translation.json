@@ -9,7 +9,7 @@
     "titlePrefix": "AI 코드 리뷰, ",
     "titleHighlight": "지금 시작하세요",
     "subtitle1": "Selvage는 AI 코드 리뷰 CLI 입니다.",
-    "subtitle2": "리뷰 대기 없이 즉시 피드백을 받으세요.",
+    "subtitle2": "즉시 피드백을 받으세요.",
     "subtitle3": "구독 없이 사용량 기반으로 지불합니다.",
     "subtitle4": "AI가 변경된 코드를 분석해 품질을 높이고 버그를 미리 막습니다."
   },
@@ -20,7 +20,8 @@
     "terminalTitle": "selvage CLI"
   },
   "features": {
-    "titlePrefix": "Selvage",
+    "titlePrefix": "",
+    "titleHighlight": "Selvage",
     "titleSuffix": "가 특별한 이유",
     "subtitle": "최신 AI 기술과 개발자 친화적인 워크플로우가 만나 완전히 새로운 코드 리뷰 경험을 제공합니다",
     "items": {
@@ -45,7 +46,7 @@
         "badge": "최적화"
       },
       "largeContext": {
-        "title": "Large Context Review",
+        "title": "대용량 컨텍스트 리뷰",
         "description": "모델의 Context Limit 초과 시에도 안정적인 대용량 코드 리뷰 지원",
         "badge": "대용량 코드 리뷰"
       },
@@ -69,7 +70,7 @@
         "title": "Smart Context 작동 방식",
         "preciseExtraction": {
           "title": "정밀 추출",
-          "description": "변경된 라인이 속한 최소 함수/클래스 블록과 관련 의존성(e.g.import 구문 등)만 추출"
+          "description": "변경된 라인이 속한 최소 함수/클래스 블록과 관련 의존성(e.g. import 구문 등)만 추출"
         },
         "costOptimization": {
           "title": "비용 최적화",
@@ -170,7 +171,7 @@
       "install": {
         "title": "설치",
         "description": "uv로 간단 설치",
-        "note": "Python 3.10+ 필요"
+        "note": "Python 3.10 이상 필요"
       },
       "apiKey": {
         "title": "API 키 설정",
@@ -256,16 +257,16 @@
   "footer": {
     "links": {
       "github": "GitHub",
-      "contact": "Contact",
-      "issues": "Issues",
-      "releases": "Releases",
+      "contact": "문의",
+      "issues": "이슈",
+      "releases": "릴리즈",
       "pypi": "PyPI"
     },
     "copyright": "© 2025 Selvage",
-    "license": "Apache-2.0 License",
+    "license": "Apache-2.0 라이선스",
     "madeWith": "Made with",
     "forDevelopers": "for developers",
-    "starMessage": "If you like this project, please give us a star!",
+    "starMessage": "이 프로젝트가 마음에 드시면 별표를 눌러주세요!",
     "starButton": "Star on GitHub"
   },
   "common": {
