@@ -207,15 +207,15 @@ export function AIModels() {
       category: t('techSupport.aiModels.categories.openai.title'),
       subtitle: t('techSupport.aiModels.categories.openai.subtitle'),
       models: [
-        { name: "gpt-5-high", description: t('techSupport.aiModels.models.gpt5High'), recommended: true, provider: undefined },
-        { name: "gpt-5", description: t('techSupport.aiModels.models.gpt5'), recommended: false, provider: undefined },
-        { name: "gpt-5-mini", description: t('techSupport.aiModels.models.gpt5Mini'), recommended: false, provider: undefined }
+        { name: "gpt-5.2-codex", description: t('techSupport.aiModels.models.gpt52Codex'), recommended: true, provider: undefined },
       ]
     },
     {
       category: t('techSupport.aiModels.categories.anthropic.title'),
       subtitle: t('techSupport.aiModels.categories.anthropic.subtitle'),
       models: [
+        { name: "claude-opus-4.5", description: t('techSupport.aiModels.models.claudeOpus45'), recommended: false, provider: undefined },
+        { name: "claude-sonnet-4.5", description: t('techSupport.aiModels.models.claudeSonnet45'), recommended: true, provider: undefined },
         { name: "claude-sonnet-4-thinking", description: t('techSupport.aiModels.models.claudeSonnet4Thinking'), recommended: true, provider: undefined },
         { name: "claude-sonnet-4", description: t('techSupport.aiModels.models.claudeSonnet4'), recommended: false, provider: undefined },
       ]
@@ -224,8 +224,8 @@ export function AIModels() {
       category: t('techSupport.aiModels.categories.google.title'),
       subtitle: t('techSupport.aiModels.categories.google.subtitle'),
       models: [
-        { name: "gemini-2.5-pro", description: t('techSupport.aiModels.models.gemini25Pro'), recommended: false, provider: undefined },
-        { name: "gemini-2.5-flash", description: t('techSupport.aiModels.models.gemini25Flash'), recommended: true, provider: undefined },
+        { name: "gemini-3-pro", description: t('techSupport.aiModels.models.gemini3Pro'), recommended: false, provider: undefined },
+        { name: "gemini-3-flash", description: t('techSupport.aiModels.models.gemini3Flash'), recommended: true, provider: undefined },
       ]
     },
     {
@@ -234,7 +234,9 @@ export function AIModels() {
       special: true,
       models: [
         { name: "qwen3-coder", description: t('techSupport.aiModels.models.qwen3Coder'), provider: "Qwen", recommended: true },
-        { name: "kimi-k2", description: t('techSupport.aiModels.models.kimiK2'), provider: "Moonshot AI", recommended: false }
+        { name: "kimi-k2", description: t('techSupport.aiModels.models.kimiK2'), provider: "Moonshot AI", recommended: false },
+        { name: "minimax-m2.1", description: t('techSupport.aiModels.models.minimaxM21'), provider: "MiniMax", recommended: false },
+        { name: "glm-4.7", description: t('techSupport.aiModels.models.glm47'), provider: "Zhipu AI", recommended: false }
       ]
     }
   ];

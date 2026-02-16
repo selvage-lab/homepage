@@ -8,14 +8,28 @@ import {
   Target,
   RotateCcw,
   BookOpen,
-  Cpu,
-  Shield
+  Server,
+  KeyRound
 } from "lucide-react";
 
 export function Features() {
   const { t } = useTranslation();
 
   const features = [
+    {
+      icon: Server,
+      title: t('features.items.mcpServer.title'),
+      description: t('features.items.mcpServer.description'),
+      badge: t('features.items.mcpServer.badge'),
+      highlight: true
+    },
+    {
+      icon: KeyRound,
+      title: t('features.items.agentDelegated.title'),
+      description: t('features.items.agentDelegated.description'),
+      badge: t('features.items.agentDelegated.badge'),
+      highlight: true
+    },
     {
       icon: Bot,
       title: t('features.items.aiModels.title'),
@@ -29,12 +43,6 @@ export function Features() {
       badge: t('features.items.gitWorkflow.badge')
     },
     {
-      icon: Bug,
-      title: t('features.items.codeReview.title'),
-      description: t('features.items.codeReview.description'),
-      badge: t('features.items.codeReview.badge')
-    },
-    {
       icon: Target,
       title: t('features.items.smartContext.title'),
       description: t('features.items.smartContext.description'),
@@ -45,6 +53,12 @@ export function Features() {
       title: t('features.items.largeContext.title'),
       description: t('features.items.largeContext.description'),
       badge: t('features.items.largeContext.badge')
+    },
+    {
+      icon: Bug,
+      title: t('features.items.codeReview.title'),
+      description: t('features.items.codeReview.description'),
+      badge: t('features.items.codeReview.badge')
     },
     {
       icon: BookOpen,
@@ -66,17 +80,27 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
+            const isHighlight = 'highlight' in feature && feature.highlight;
             return (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-slate-50 to-blue-50/30">
+              <Card
+                key={index}
+                className={`
+                  border-0 shadow-lg hover:shadow-xl transition-all duration-300
+                  ${isHighlight
+                    ? 'bg-gradient-to-br from-blue-50 to-indigo-50 ring-2 ring-blue-200/50 hover:ring-blue-300/70'
+                    : 'bg-gradient-to-br from-slate-50 to-blue-50/30'
+                  }
+                `}
+              >
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${isHighlight ? 'bg-gradient-to-br from-blue-500 to-indigo-600' : 'bg-blue-600'}`}>
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                    <Badge variant="secondary" className={isHighlight ? 'bg-blue-200 text-blue-800' : 'bg-blue-100 text-blue-700'}>
                       {feature.badge}
                     </Badge>
                   </div>

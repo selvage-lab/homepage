@@ -7,11 +7,31 @@
   },
   "hero": {
     "titlePrefix": "AI 코드 리뷰, ",
-    "titleHighlight": "지금 시작하세요",
-    "subtitle1": "Selvage는 AI 코드 리뷰 CLI 입니다.",
-    "subtitle2": "즉시 피드백을 받으세요.",
-    "subtitle3": "구독 없이 사용량 기반으로 지불합니다.",
-    "subtitle4": "AI가 변경된 코드를 분석해 품질을 높이고 버그를 미리 막습니다."
+    "titleHighlight": "IDE 안에서",
+    "subtitle1": "Selvage는 IDE와 터미널을 위한 AI 코드 리뷰 도구입니다.",
+    "subtitle2": "플러그인 설치만으로 API 키 없이 바로 리뷰하세요.",
+    "subtitle3": "MCP 서버로 등록하면 자연어로 리뷰를 요청할 수 있습니다.",
+    "subtitle4": "CLI, MCP, Plugin — 워크플로우에 맞는 모드를 선택하세요.",
+    "tabs": {
+      "plugin": "Plugin",
+      "mcp": "MCP",
+      "cli": "CLI"
+    },
+    "pluginCode": {
+      "line1": "/plugin marketplace add selvage-lab/selvage",
+      "line2": "/plugin install selvage@selvage-lab-selvage",
+      "line3": "/review  ← 끝! API 키 불필요"
+    },
+    "mcpCode": {
+      "line1": "claude mcp add selvage -- uvx selvage mcp",
+      "line2": "# AI 어시스턴트에게 요청하세요:",
+      "line3": "\"selvage로 현재 변경사항 리뷰해줘\""
+    },
+    "cliCode": {
+      "line1": "uv tool install selvage",
+      "line2": "export OPENROUTER_API_KEY=\"your_key\"",
+      "line3": "selvage review --model claude-sonnet-4-thinking"
+    }
   },
   "demo": {
     "titlePrefix": "코드 리뷰도 ",
@@ -25,20 +45,25 @@
     "titleSuffix": "가 특별한 이유",
     "subtitle": "최신 AI 기술과 개발자 친화적인 워크플로우가 만나 완전히 새로운 코드 리뷰 경험을 제공합니다",
     "items": {
+      "mcpServer": {
+        "title": "MCP 서버 모드",
+        "description": "Cursor, Claude Code 등에서 MCP 서버로 등록하여 자연어로 코드 리뷰 요청",
+        "badge": "IDE 통합"
+      },
+      "agentDelegated": {
+        "title": "에이전트 위임 리뷰",
+        "description": "호스트 에이전트가 자체 LLM으로 구조화된 컨텍스트를 사용해 리뷰 수행 — API 키 불필요",
+        "badge": "API 키 불필요"
+      },
       "aiModels": {
         "title": "다양한 AI 모델 지원",
-        "description": "OpenAI GPT-5, Anthropic Claude Sonnet-4, Google Gemini 등 최신 LLM 모델 활용",
+        "description": "OpenAI GPT-5, Anthropic Claude, Google Gemini 등 최신 LLM 모델 활용",
         "badge": "최신 AI"
       },
       "gitWorkflow": {
         "title": "Git 워크플로우 통합",
         "description": "staged, unstaged, 특정 커밋/브랜치 간 변경사항 분석 지원",
         "badge": "개발자 친화적"
-      },
-      "codeReview": {
-        "title": "포괄적 코드 검토",
-        "description": "버그 및 논리 오류 탐지, 코드 품질 및 가독성 향상 제안",
-        "badge": "버그 탐지"
       },
       "smartContext": {
         "title": "Smart Context",
@@ -49,6 +74,11 @@
         "title": "대용량 컨텍스트 리뷰",
         "description": "모델의 Context Limit 초과 시에도 안정적인 대용량 코드 리뷰 지원",
         "badge": "대용량 코드 리뷰"
+      },
+      "codeReview": {
+        "title": "포괄적 코드 검토",
+        "description": "버그 및 논리 오류 탐지, 코드 품질 및 가독성 향상 제안",
+        "badge": "버그 탐지"
       },
       "opensource": {
         "title": "오픈소스",
@@ -143,15 +173,17 @@
         }
       },
       "models": {
-        "gpt5High": "높은 정확도의 추론 모델 (400K 컨텍스트)",
-        "gpt5": "최신 고급 추론 모델 (400K 컨텍스트)",
-        "gpt5Mini": "경량화된 빠른 응답 모델 (400K 컨텍스트)",
+        "gpt52Codex": "고성능 추론 코덱스 모델 (400K 컨텍스트)",
+        "claudeOpus45": "확장 사고 지원 최상위 모델 (200K 컨텍스트)",
+        "claudeSonnet45": "고품질 추론 모델 (200K 컨텍스트)",
+        "claudeSonnet4": "하이브리드 추론 모델로 코딩 최적화 (200K 컨텍스트)",
         "claudeSonnet4Thinking": "확장 사고 프로세스 지원 (200K 컨텍스트)",
-        "claudeSonnet4": "하이브리드 추론 모델로 고급 코딩 최적화 (200K 컨텍스트)",
-        "gemini25Pro": "대용량 컨텍스트 및 고급 추론 (1M+ 토큰)",
-        "gemini25Flash": "응답 속도와 비용 효율성 최적화 (1M+ 토큰)",
+        "gemini3Pro": "대용량 컨텍스트 및 고급 추론 (1M+ 토큰)",
+        "gemini3Flash": "응답 속도와 비용 효율성 최적화 (1M+ 토큰)",
         "qwen3Coder": "480B 파라미터 MoE 코딩 특화 모델 (1M+ 토큰)",
-        "kimiK2": "1T 파라미터 MoE 대용량 추론 모델 (128K 토큰)"
+        "kimiK2": "1T 파라미터 MoE 대용량 추론 모델 (128K 토큰)",
+        "minimaxM21": "16K 사고 토큰의 고급 추론 모델",
+        "glm47": "사고 활성화 추론 모델 (16K 사고 토큰)"
       },
       "recommended": "추천"
     }
@@ -160,88 +192,125 @@
     "titlePrefix": "",
     "titleHighlight": "Quick Start",
     "titleSuffix": "",
-    "subtitle": "복잡한 설정 없이 몇 분 안에 AI 기반 코드 리뷰를 시작할 수 있습니다",
-    "steps": {
-      "install": {
-        "title": "설치",
-        "description": "uv로 간단 설치",
-        "note": "Python 3.10 이상 필요"
+    "subtitle": "Selvage 사용 방식을 선택하세요 — Plugin, MCP, CLI",
+    "tabs": {
+      "plugin": "🔌 Plugin (추천)",
+      "mcp": "🤖 MCP 서버",
+      "cli": "⌨️ CLI"
+    },
+    "plugin": {
+      "title": "Claude Code 플러그인",
+      "subtitle": "원클릭 설치, API 키 불필요",
+      "badge": "추천",
+      "steps": {
+        "install": {
+          "title": "플러그인 설치",
+          "description": "마켓플레이스에서 두 명령어로 설치",
+          "code1": "/plugin marketplace add selvage-lab/selvage",
+          "code2": "/plugin install selvage@selvage-lab-selvage"
+        },
+        "review": {
+          "title": "리뷰 시작",
+          "description": "/review 명령어를 바로 사용하세요"
+        }
       },
-      "apiKey": {
-        "title": "API 키 설정",
-        "description": "OpenRouter API 키 설정",
-        "note": "다양한 AI 모델 사용 가능"
+      "reviewExamples": {
+        "unstaged": "unstaged 변경사항 리뷰",
+        "staged": "staged 변경사항 리뷰",
+        "branch": "main 대비 변경사항 리뷰",
+        "commit": "특정 커밋부터 리뷰"
       },
-      "start": {
-        "title": "코드 리뷰 시작",
-        "description": "AI 코드 리뷰 실행",
-        "note": "터미널에 즉시 출력"
+      "reviewCommands": {
+        "unstaged": "/review",
+        "staged": "/review staged",
+        "branch": "/review branch main",
+        "commit": "/review commit abc1234"
+      },
+      "noApiKeyNote": "API 키가 필요하지 않습니다! 플러그인은 get_review_context를 사용하여 Claude Code 자체 LLM으로 코드 리뷰를 수행합니다."
+    },
+    "mcp": {
+      "title": "MCP 서버 모드",
+      "subtitle": "MCP 서버로 등록하고 자연어로 리뷰 요청",
+      "tabs": {
+        "cursor": "Cursor",
+        "claudeCode": "Claude Code"
+      },
+      "cursor": {
+        "title": "Cursor 통합",
+        "description": "Cursor MCP 설정 파일에 추가하세요",
+        "configPath": "~/.cursor/mcp.json",
+        "withEnv": "환경변수 사용 (이미 설정된 경우)",
+        "withDirectKey": "직접 API 키 지정"
+      },
+      "claudeCode": {
+        "title": "Claude Code 통합",
+        "description": "한 줄 명령어로 등록",
+        "withEnv": "환경변수 사용 (이미 설정된 경우)",
+        "withDirectKey": "직접 지정"
+      },
+      "usage": {
+        "title": "사용법",
+        "description": "IDE를 재시작한 후 AI 어시스턴트에게 리뷰를 요청하세요:",
+        "example1": "selvage로 현재 변경사항 리뷰해줘",
+        "example2": "selvage로 staged 작업을 claude-sonnet-4-thinking으로 리뷰해줘",
+        "example3": "selvage로 현재 변경사항의 리뷰 컨텍스트를 가져와서 리뷰해줘"
+      },
+      "agentDelegated": {
+        "title": "에이전트 위임 리뷰 (API 키 불필요)",
+        "description": "get_review_context 도구는 구조화된 컨텍스트를 반환하여 호스트 에이전트가 자체 LLM으로 리뷰를 수행할 수 있습니다 — Selvage API 키가 필요하지 않습니다."
       }
     },
-    "installation": {
-      "title": "Selvage 설치하기",
-      "recommendedMethod": {
-        "title": "권장 방법 (uv 사용)",
-        "uvInstall": "#uv 설치",
-        "selvageInstall": "#selvage 설치",
-        "note": "uv는 한 번만 설치하면 됩니다"
+    "cli": {
+      "title": "CLI 모드",
+      "subtitle": "터미널 직접 사용 및 스크립트/CI·CD용",
+      "steps": {
+        "install": {
+          "title": "설치",
+          "description": "uv로 간단 설치",
+          "note": "Python 3.10 이상 필요"
+        },
+        "apiKey": {
+          "title": "API 키 설정",
+          "description": "OpenRouter API 키 설정",
+          "note": "다양한 AI 모델 사용 가능"
+        },
+        "start": {
+          "title": "코드 리뷰 시작",
+          "description": "AI 코드 리뷰 실행",
+          "note": "터미널에 즉시 출력"
+        }
       },
-      "alternativeMethod": {
-        "title": "대안 방법 (pipx 사용)",
-        "pipxInstall": "#pipx 설치",
-        "selvageInstall": "#selvage 설치",
-        "note": "macOS 사용자를 위한 대안 방법"
+      "installation": {
+        "title": "Selvage 설치하기",
+        "recommendedMethod": {
+          "title": "권장 방법 (uv 사용)",
+          "uvInstall": "#uv 설치",
+          "selvageInstall": "#selvage 설치",
+          "note": "uv는 한 번만 설치하면 됩니다"
+        },
+        "alternativeMethod": {
+          "title": "대안 방법 (pipx 사용)",
+          "pipxInstall": "#pipx 설치",
+          "selvageInstall": "#selvage 설치",
+          "note": "macOS 사용자를 위한 대안 방법"
+        }
       },
-      "traditionalMethod": {
-        "title": "전통적 방법 (pip)",
-        "note": "⚠️ 일부 환경에서 externally-managed-environment 에러 발생 가능"
-      }
-    },
-    "configuration": {
-      "title": "Selvage 설정하기",
-      "viewAllSettings": "모든 설정 보기",
-      "setDefaultModel": "기본 모델 설정",
-      "setLanguage": "리뷰 결과 언어 설정",
-      "examples": {
-        "model": "예시: claude-sonnet-4-thinking",
-        "language": "예시: English, Korean"
-      }
-    },
-    "codeReview": {
-      "title": "코드 리뷰하기",
-      "basicCommand": "기본 명령어",
-      "mainOptions": "주요 옵션",
-      "usageExamples": "사용 예시",
-      "options": {
-        "repoPath": "Git 저장소 경로 (기본값: 현재 디렉토리)",
-        "staged": "스테이징된 변경사항만 리뷰",
-        "targetCommit": "특정 커밋부터 HEAD까지의 변경사항 리뷰 (예: abc1234)",
-        "targetBranch": "현재 브랜치와 지정된 브랜치 간 변경사항 리뷰 (예: main)",
-        "model": "사용할 AI 모델 (예: claude-sonnet-4-thinking)",
-        "openUi": "리뷰 완료 후 자동으로 UI 실행",
-        "noPrint": "터미널에 리뷰 결과를 출력하지 않음 (기본적으로 터미널 출력 활성화)",
-        "skipCache": "캐시를 사용하지 않고 새로운 리뷰 수행"
+      "codeReview": {
+        "title": "코드 리뷰하기",
+        "basicCommand": "기본 명령어",
+        "usageExamples": "사용 예시",
+        "examples": {
+          "currentDir": "현재 워킹 디렉토리 변경사항 리뷰",
+          "preCommit": "커밋 전 최종 점검",
+          "prReview": "PR 보내기 전 코드 리뷰",
+          "fastModel": "빠르고 경제적인 모델로 간단한 변경사항 리뷰"
+        }
       },
-      "examples": {
-        "currentDir": "현재 워킹 디렉토리 변경사항 리뷰",
-        "preCommit": "커밋 전 최종 점검",
-        "specificFiles": "특정 파일들만 리뷰",
-        "prReview": "PR 보내기 전 코드 리뷰",
-        "fastModel": "빠르고 경제적인 모델로 간단한 변경사항 리뷰",
-        "webUi": "리뷰 후 웹 UI로 자세히 확인"
-      }
-    },
-    "results": {
-      "title": "결과 확인하기",
-      "descriptionPrefix": "리뷰 결과는 ",
-      "descriptionBold": "터미널에 바로 출력",
-      "descriptionSuffix": "되며, 동시에 파일로도 자동 저장됩니다.",
-      "additionalInfoPrefix": "",
-      "additionalInfoBold": "추가적인 리뷰 관리 및 재확인",
-      "additionalInfoSuffix": "을 위해 웹 UI를 사용할 수 있습니다:",
-      "examples": {
-        "webUiManagement": "저장된 모든 리뷰 결과를 웹 UI로 관리",
-        "differentPort": "다른 포트에서 UI 실행"
+      "results": {
+        "title": "결과 확인하기",
+        "description": "리뷰 결과는 터미널에 바로 출력되며, 동시에 파일로도 자동 저장됩니다.",
+        "webUi": "저장된 모든 리뷰 결과를 웹 UI로 관리",
+        "webUiCode": "selvage view"
       }
     },
     "terminal": "터미널",
