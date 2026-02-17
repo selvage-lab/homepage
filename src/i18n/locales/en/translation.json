@@ -7,11 +7,9 @@
   },
   "hero": {
     "titlePrefix": "AI Code Review, ",
-    "titleHighlight": "Inside Your IDE",
-    "subtitle1": "Selvage is an AI code review tool for your IDE and terminal.",
-    "subtitle2": "Install the plugin and review with zero API key setup.",
-    "subtitle3": "Or register as MCP server and request reviews in natural language.",
-    "subtitle4": "CLI, MCP, Plugin — choose the mode that fits your workflow.",
+    "titleHighlight": "Start Now",
+    "subtitle1": "Extracts only the essentials from your changes for precise reviews.",
+    "subtitle2": "Claude, GPT, Gemini — pick the model that fits.",
     "tabs": {
       "plugin": "Plugin",
       "mcp": "MCP",

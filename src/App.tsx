@@ -1,5 +1,4 @@
 import React from "react";
-import { Hero } from "./components/Hero";
 import { Demo } from "./components/Demo";
 import { Features } from "./components/Features";
 import { TechSupport } from "./components/TechSupport";
@@ -16,11 +15,10 @@ export default function App() {
 
       {/* Add top padding to prevent content overlap */}
       <div className="pt-20">
-        <Hero />
+        <QuickStart />
         <Demo />
         <Features />
         <TechSupport />
-        <QuickStart />
         <Footer />
       </div>
     </div>

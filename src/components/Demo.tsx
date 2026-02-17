@@ -1,5 +1,3 @@
-import { Badge } from "./ui/badge";
-import { Play, Terminal, Zap } from "lucide-react";
 import { useTranslation } from 'react-i18next';
 import demoVideo from "../assets/demo.mp4";
 
@@ -7,8 +5,10 @@ export function Demo() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-20 bg-slate-50">
-      <div className="container mx-auto px-6">
+    <section className="relative py-20 bg-slate-50">
+      {/* Dark-to-light gradient transition */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-slate-900 to-transparent pointer-events-none"></div>
+      <div className="relative container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl mb-6 text-slate-900">
             <span className="text-blue-600">{t('demo.titlePrefix')}</span>{t('demo.titleHighlight')}

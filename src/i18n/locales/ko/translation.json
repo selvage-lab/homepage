@@ -7,11 +7,9 @@
   },
   "hero": {
     "titlePrefix": "AI 코드 리뷰, ",
-    "titleHighlight": "IDE 안에서",
-    "subtitle1": "Selvage는 IDE와 터미널을 위한 AI 코드 리뷰 도구입니다.",
-    "subtitle2": "플러그인 설치만으로 API 키 없이 바로 리뷰하세요.",
-    "subtitle3": "MCP 서버로 등록하면 자연어로 리뷰를 요청할 수 있습니다.",
-    "subtitle4": "CLI, MCP, Plugin — 워크플로우에 맞는 모드를 선택하세요.",
+    "titleHighlight": "지금 시작하세요",
+    "subtitle1": "변경된 코드의 핵심만 추출해 정밀하게 리뷰합니다.",
+    "subtitle2": "Claude, GPT, Gemini — 원하는 모델을 선택하세요.",
     "tabs": {
       "plugin": "Plugin",
       "mcp": "MCP",
