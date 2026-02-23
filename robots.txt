@@ -8,3 +8,6 @@ Sitemap: https://selvage.ai/sitemap.xml
 # Block crawling of temporary or private directories if needed
 # Disallow: /private/
 # Disallow: /temp/
+
+# LLM-optimized documentation for AI Agents
+Allow: /llms.txt
