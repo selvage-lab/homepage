@@ -1,0 +1,81 @@
+# Selvage (AI-Powered Code Review Automation Tool)
+
+Selvage is a modern CLI tool that helps AI analyze Git diffs to improve code quality, find bugs, and identify security vulnerabilities.
+
+## 🌟 Core Value Proposition
+- **Agent-Delegated Review (`get_review_context`)**: Host agents (Claude Code, Cursor, Antigravity, etc.) can perform code reviews directly using their own LLM without requiring an external API key.
+- **Smart Context Analysis**: Uses Tree-sitter (AST) to extract only the necessary code blocks containing changed lines + dependencies, ensuring accurate reviews while dramatically saving tokens.
+- **Multi-turn Processing**: Automatically splits prompts for large codebases when context limits are exceeded (auto-triggers over 200k tokens).
+- **Git Integration**: Review staged, unstaged, or changes between specific commits/branches natively within your existing git workflow.
+
+## 🚀 Quick Start
+Selvage provides various ways to get started tailored to your workflow.
+
+### 1. Claude Code Plugin (Recommended)
+You can seamlessly integrate Selvage directly into Claude Code. No API key required!
+
+```bash
+# Step 1: Add Selvage marketplace
+/plugin marketplace add selvage-lab/selvage
+
+# Step 2: Install the plugin
+/plugin install selvage@selvage-lab-selvage
+```
+
+After installation, use the `/review` skill directly in Claude Code:
+- `/review` (Review unstaged changes)
+- `/review staged` (Review staged changes)
+- `/review branch main` (Review against main branch)
+- `/review commit abc1234` (Review from specific commit)
+
+### 2. Cursor Integration (MCP Mode)
+Add Selvage to Cursor's MCP configuration (`~/.cursor/mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "selvage": {
+      "command": "uvx",
+      "args": ["selvage", "mcp"]
+    }
+  }
+}
+```
+Then ask Cursor: 
+- "Please review current changes using selvage mcp"
+- "Review staged work using gpt-5-high with selvage mcp"
+
+### 3. CLI Mode
+Install via `uv` or `pipx`:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv tool install selvage
+```
+
+Set up your API key (if not using Plugin):
+```bash
+export OPENROUTER_API_KEY="your_key"
+```
+
+Review code via terminal:
+```bash
+selvage review --model claude-sonnet-4-thinking # Current Dir
+selvage review --staged                         # Pre-commit Check
+selvage review --target-branch develop          # PR Review
+selvage review --model gemini-3-flash           # Fast Review
+```
+
+View results in Web UI:
+```bash
+selvage view
+
+## 🤖 Supported Models (via OpenRouter)
+You can use OpenRouter API Key to access a wide variety of models.
+- **OpenAI**: gpt-5.2-codex (Recommended for coding)
+- **Anthropic**: claude-opus-4.6, claude-sonnet-4.5
+- **Google**: gemini-3-pro, gemini-3-flash
+- **Others (Highly Recommended for Coding)**: minimax-m2.5, qwen3-coder, deepseek-r1-0528, etc.
+
+## 🔗 Links
+- Website/Docs: https://selvage.ai
+- GitHub Repository: https://github.com/selvage-lab/selvage
